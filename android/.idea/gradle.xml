@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/../flutter_tts/android" />
+            <option value="$PROJECT_DIR$/../native_mixpanel/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/audioplayers-0.13.2/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/device_info-0.4.1+1/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/esys_flutter_share-1.0.2/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/file_picker-1.4.2+1/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_animation_set-0.0.4/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-0.8.4+2/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-1.4.2/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.5.4+5/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-1.1.7+2/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.2.5/android" />
+            <option value="$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter-0.3.15+1/android" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="testRunner" value="PLATFORM" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

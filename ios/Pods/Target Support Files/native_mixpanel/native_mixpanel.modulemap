@@ -1,0 +1,6 @@
+framework module native_mixpanel {
+  umbrella header "native_mixpanel-umbrella.h"
+
+  export *
+  module * { export * }
+}

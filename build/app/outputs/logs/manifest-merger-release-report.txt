@@ -1,0 +1,422 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:1:1-43:12
+INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:1:1-43:12
+INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:1:1-43:12
+INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:1:1-43:12
+MERGED from [:native_mixpanel] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/native_mixpanel/intermediates/library_manifest/release/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.core:core-ktx:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/542b58ef37dc8c6490d0cd362fcf31a4/core-ktx-1.1.0/AndroidManifest.xml:2:1-9:12
+MERGED from [:file_picker] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/file_picker/intermediates/library_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:audioplayers] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/audioplayers/intermediates/library_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/sqflite/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:device_info] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/device_info/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_tts] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/flutter_tts/intermediates/library_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:url_launcher] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:2:1-14:12
+MERGED from [:webview_flutter] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/webview_flutter/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/path_provider/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_animation_set] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/flutter_animation_set/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_local_notifications] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/flutter_local_notifications/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:shared_preferences] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/shared_preferences/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:2:1-19:12
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/85bcab31c636d54caf526996105962e9/appcompat-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.webkit:webkit:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/a7b09f08e57f8d6c9f9bd6ef427e89c0/webkit-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/03c499c0fc45a68d1c501792fe34f3eb/vectordrawable-animated-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/2af0fa91f1bf202d7c11017d276aa4bd/vectordrawable-1.0.0-beta01/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-messaging:17.3.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1c37dcca22203f48ca5e5232f1e873bc/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:17:1-37:12
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:17:1-59:12
+MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/22c39947c60f495187b7fe9419c2522d/jetified-firebase-common-16.0.3/AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/e3a8870c5da3801a6944feeebdeaaa0a/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/907058c8fda5a869a0ed2fc8b5d28ef7/jetified-play-services-base-16.0.1/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/ab083f0966b3e2560ab813f0db2c20d2/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/e67cbedc328547363559b13da5a74e7e/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/65659e488967a9725cc61fbdf13f61b1/jetified-play-services-stats-16.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/58824e0d59f4c0a2839d49c41f90552e/jetified-play-services-basement-16.0.1/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/56aab2ea9b94df35bc97b810c8d07255/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/10ed85a52fed01b1109e7afe20c721ee/fragment-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/ddc7f769a4c4a21720eb51404be4467e/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/4c80efb3a8b824cdae8989d7feab802e/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/17b27361c17bc830702dc5796080d53f/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/dcfe920d575902367301d3ceb5ae74df/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/12ea3ccc8121d9b8c8c242770b33c7ec/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/796bcda817a9ff1d4034d31d664fdd90/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/67f4c0089d0feff62347e7c360cd3c80/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/ef52454afb40fd3f2a285132fca9f552/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/0028647c4d23612072cf618d8ffca1f0/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/eb491577c1ae81680ad72f54c455f640/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/026e1c65e0e1ce9917ce7d7c201da725/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/d5234deabfaa4ee183ae8745e3e67ee8/core-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/959cf0873c04d887c5b4a5b340a58c46/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/90ac9060015457d38e5943533fdc5112/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/2c50f0d2b8a5ae1ee2ab8353a5fd4f0a/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/94a19efe3c971e28aafb19f3dc0e84ba/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1e992ca64263e7ef8c2bbfa102440e60/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/229e49293d5c05bfbdb8bf657b142b70/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1b0c4b16a18d02917f6c0f66d498f82b/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/3cb97c5ce5340ec131566070d6b7a5ce/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/9c891d2e7afda4e37675ce99027e3f88/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/c3a74203c8d675279ee93f3507784286/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/c1780f66ebdd8f7e3ffce3d2e0e8389e/lifecycle-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.mixpanel.android:mixpanel-android:5.6.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/fd589e72fd85669430265ae0388e66db/jetified-mixpanel-android-5.6.1/AndroidManifest.xml:2:1-84:12
+INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:1:1-43:12
+INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:1:1-43:12
+INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:1:1-43:12
+	package
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:2:5-27
+		INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:1:1-43:12
+		INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:1:1-43:12
+		INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:4:5-71
+	android:name
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:4:22-68
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:5:5-80
+	android:name
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:5:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:6:5-67
+MERGED from [:native_mixpanel] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/native_mixpanel/intermediates/library_manifest/release/AndroidManifest.xml:7:5-67
+MERGED from [:native_mixpanel] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/native_mixpanel/intermediates/library_manifest/release/AndroidManifest.xml:7:5-67
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:23:5-67
+MERGED from [com.mixpanel.android:mixpanel-android:5.6.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/fd589e72fd85669430265ae0388e66db/jetified-mixpanel-android-5.6.1/AndroidManifest.xml:10:5-67
+MERGED from [com.mixpanel.android:mixpanel-android:5.6.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/fd589e72fd85669430265ae0388e66db/jetified-mixpanel-android-5.6.1/AndroidManifest.xml:10:5-67
+	android:name
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:6:22-64
+application
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:12:5-42:19
+MERGED from [:url_launcher] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:7:5-12:19
+MERGED from [:url_launcher] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:7:5-12:19
+MERGED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:7:5-17:19
+MERGED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:7:5-17:19
+MERGED from [com.google.firebase:firebase-messaging:17.3.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1c37dcca22203f48ca5e5232f1e873bc/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-messaging:17.3.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1c37dcca22203f48ca5e5232f1e873bc/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:22:5-35:19
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:28:5-57:19
+MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/22c39947c60f495187b7fe9419c2522d/jetified-firebase-common-16.0.3/AndroidManifest.xml:9:5-15:19
+MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/22c39947c60f495187b7fe9419c2522d/jetified-firebase-common-16.0.3/AndroidManifest.xml:9:5-15:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/e3a8870c5da3801a6944feeebdeaaa0a/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/e3a8870c5da3801a6944feeebdeaaa0a/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/907058c8fda5a869a0ed2fc8b5d28ef7/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/907058c8fda5a869a0ed2fc8b5d28ef7/jetified-play-services-base-16.0.1/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/ab083f0966b3e2560ab813f0db2c20d2/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/ab083f0966b3e2560ab813f0db2c20d2/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/e67cbedc328547363559b13da5a74e7e/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/e67cbedc328547363559b13da5a74e7e/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/65659e488967a9725cc61fbdf13f61b1/jetified-play-services-stats-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/65659e488967a9725cc61fbdf13f61b1/jetified-play-services-stats-16.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/58824e0d59f4c0a2839d49c41f90552e/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/58824e0d59f4c0a2839d49c41f90552e/jetified-play-services-basement-16.0.1/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/d5234deabfaa4ee183ae8745e3e67ee8/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/d5234deabfaa4ee183ae8745e3e67ee8/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/959cf0873c04d887c5b4a5b340a58c46/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/959cf0873c04d887c5b4a5b340a58c46/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.mixpanel.android:mixpanel-android:5.6.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/fd589e72fd85669430265ae0388e66db/jetified-mixpanel-android-5.6.1/AndroidManifest.xml:15:5-82:19
+MERGED from [com.mixpanel.android:mixpanel-android:5.6.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/fd589e72fd85669430265ae0388e66db/jetified-mixpanel-android-5.6.1/AndroidManifest.xml:15:5-82:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/d5234deabfaa4ee183ae8745e3e67ee8/core-1.1.0/AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:14:9-29
+	android:icon
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:16:9-43
+	android:usesCleartextTraffic
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:15:9-44
+	android:name
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:13:9-57
+activity#uk.hold.hold.MainActivity
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:17:9-35:20
+	android:launchMode
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:19:13-43
+	android:hardwareAccelerated
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:22:13-47
+	android:windowSoftInputMode
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:23:13-55
+	android:configChanges
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:21:13-144
+	android:theme
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:20:13-47
+	android:name
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:18:13-41
+meta-data#io.flutter.app.android.SplashScreenUntilFirstFrame
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:28:13-30:40
+	android:value
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:30:17-37
+	android:name
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:29:17-82
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:31:13-34:29
+action#android.intent.action.MAIN
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:32:17-68
+	android:name
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:32:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:33:17-76
+	android:name
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:33:27-74
+receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:36:9-40:20
+	android:name
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:36:19-107
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:37:13-39:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:38:17-86
+	android:name
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:38:25-76
+receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver
+ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:41:9-106
+	android:name
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml:41:19-103
+uses-sdk
+INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+MERGED from [:native_mixpanel] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/native_mixpanel/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:native_mixpanel] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/native_mixpanel/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/542b58ef37dc8c6490d0cd362fcf31a4/core-ktx-1.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/542b58ef37dc8c6490d0cd362fcf31a4/core-ktx-1.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [:file_picker] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/file_picker/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:file_picker] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/file_picker/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:audioplayers] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/audioplayers/intermediates/library_manifest/release/AndroidManifest.xml:7:5-44
+MERGED from [:audioplayers] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/audioplayers/intermediates/library_manifest/release/AndroidManifest.xml:7:5-44
+MERGED from [:sqflite] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/sqflite/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/sqflite/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:device_info] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/device_info/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:device_info] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/device_info/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_tts] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/flutter_tts/intermediates/library_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_tts] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/flutter_tts/intermediates/library_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:webview_flutter] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/webview_flutter/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:webview_flutter] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/webview_flutter/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/path_provider/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/path_provider/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_animation_set] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/flutter_animation_set/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_animation_set] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/flutter_animation_set/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_local_notifications] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/flutter_local_notifications/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_local_notifications] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/flutter_local_notifications/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/shared_preferences/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/shared_preferences/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/85bcab31c636d54caf526996105962e9/appcompat-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0-beta01] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/85bcab31c636d54caf526996105962e9/appcompat-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/a7b09f08e57f8d6c9f9bd6ef427e89c0/webkit-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/a7b09f08e57f8d6c9f9bd6ef427e89c0/webkit-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/03c499c0fc45a68d1c501792fe34f3eb/vectordrawable-animated-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0-beta01] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/03c499c0fc45a68d1c501792fe34f3eb/vectordrawable-animated-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/2af0fa91f1bf202d7c11017d276aa4bd/vectordrawable-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0-beta01] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/2af0fa91f1bf202d7c11017d276aa4bd/vectordrawable-1.0.0-beta01/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:17.3.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1c37dcca22203f48ca5e5232f1e873bc/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:17.3.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1c37dcca22203f48ca5e5232f1e873bc/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/22c39947c60f495187b7fe9419c2522d/jetified-firebase-common-16.0.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-common:16.0.3] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/22c39947c60f495187b7fe9419c2522d/jetified-firebase-common-16.0.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/e3a8870c5da3801a6944feeebdeaaa0a/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/e3a8870c5da3801a6944feeebdeaaa0a/jetified-firebase-iid-interop-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/907058c8fda5a869a0ed2fc8b5d28ef7/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/907058c8fda5a869a0ed2fc8b5d28ef7/jetified-play-services-base-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/ab083f0966b3e2560ab813f0db2c20d2/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/ab083f0966b3e2560ab813f0db2c20d2/jetified-play-services-tasks-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/e67cbedc328547363559b13da5a74e7e/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/e67cbedc328547363559b13da5a74e7e/jetified-firebase-measurement-connector-17.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/65659e488967a9725cc61fbdf13f61b1/jetified-play-services-stats-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/65659e488967a9725cc61fbdf13f61b1/jetified-play-services-stats-16.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/58824e0d59f4c0a2839d49c41f90552e/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/58824e0d59f4c0a2839d49c41f90552e/jetified-play-services-basement-16.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/56aab2ea9b94df35bc97b810c8d07255/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/56aab2ea9b94df35bc97b810c8d07255/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/10ed85a52fed01b1109e7afe20c721ee/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/10ed85a52fed01b1109e7afe20c721ee/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/ddc7f769a4c4a21720eb51404be4467e/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/ddc7f769a4c4a21720eb51404be4467e/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/4c80efb3a8b824cdae8989d7feab802e/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/4c80efb3a8b824cdae8989d7feab802e/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/17b27361c17bc830702dc5796080d53f/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/17b27361c17bc830702dc5796080d53f/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/dcfe920d575902367301d3ceb5ae74df/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/dcfe920d575902367301d3ceb5ae74df/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/12ea3ccc8121d9b8c8c242770b33c7ec/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/12ea3ccc8121d9b8c8c242770b33c7ec/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/796bcda817a9ff1d4034d31d664fdd90/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/796bcda817a9ff1d4034d31d664fdd90/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/67f4c0089d0feff62347e7c360cd3c80/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/67f4c0089d0feff62347e7c360cd3c80/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/ef52454afb40fd3f2a285132fca9f552/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/ef52454afb40fd3f2a285132fca9f552/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/0028647c4d23612072cf618d8ffca1f0/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/0028647c4d23612072cf618d8ffca1f0/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/eb491577c1ae81680ad72f54c455f640/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/eb491577c1ae81680ad72f54c455f640/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/026e1c65e0e1ce9917ce7d7c201da725/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/026e1c65e0e1ce9917ce7d7c201da725/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/d5234deabfaa4ee183ae8745e3e67ee8/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/d5234deabfaa4ee183ae8745e3e67ee8/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/959cf0873c04d887c5b4a5b340a58c46/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/959cf0873c04d887c5b4a5b340a58c46/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/90ac9060015457d38e5943533fdc5112/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/90ac9060015457d38e5943533fdc5112/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/2c50f0d2b8a5ae1ee2ab8353a5fd4f0a/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/2c50f0d2b8a5ae1ee2ab8353a5fd4f0a/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/94a19efe3c971e28aafb19f3dc0e84ba/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/94a19efe3c971e28aafb19f3dc0e84ba/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1e992ca64263e7ef8c2bbfa102440e60/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1e992ca64263e7ef8c2bbfa102440e60/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/229e49293d5c05bfbdb8bf657b142b70/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/229e49293d5c05bfbdb8bf657b142b70/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1b0c4b16a18d02917f6c0f66d498f82b/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1b0c4b16a18d02917f6c0f66d498f82b/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/3cb97c5ce5340ec131566070d6b7a5ce/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/3cb97c5ce5340ec131566070d6b7a5ce/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/9c891d2e7afda4e37675ce99027e3f88/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/9c891d2e7afda4e37675ce99027e3f88/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/c3a74203c8d675279ee93f3507784286/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/c3a74203c8d675279ee93f3507784286/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/c1780f66ebdd8f7e3ffce3d2e0e8389e/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/c1780f66ebdd8f7e3ffce3d2e0e8389e/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.mixpanel.android:mixpanel-android:5.6.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/fd589e72fd85669430265ae0388e66db/jetified-mixpanel-android-5.6.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.mixpanel.android:mixpanel-android:5.6.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/fd589e72fd85669430265ae0388e66db/jetified-mixpanel-android-5.6.1/AndroidManifest.xml:5:5-7:41
+INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/meketiuk/Work/Coding/0xCompany/HOLD/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:native_mixpanel] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/native_mixpanel/intermediates/library_manifest/release/AndroidManifest.xml:8:5-79
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [:native_mixpanel] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/native_mixpanel/intermediates/library_manifest/release/AndroidManifest.xml:8:22-76
+uses-permission#android.permission.BLUETOOTH
+ADDED from [:native_mixpanel] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/native_mixpanel/intermediates/library_manifest/release/AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from [:native_mixpanel] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/native_mixpanel/intermediates/library_manifest/release/AndroidManifest.xml:9:22-65
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:file_picker] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/file_picker/intermediates/library_manifest/release/AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from [:file_picker] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/file_picker/intermediates/library_manifest/release/AndroidManifest.xml:7:22-77
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:8:9-11:74
+	android:exported
+		ADDED from [:url_launcher] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:10:13-37
+	android:theme
+		ADDED from [:url_launcher] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:11:13-71
+	android:name
+		ADDED from [:url_launcher] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:9:13-74
+provider#de.esys.esysfluttershare.EsysFlutterShareFileProvider
+ADDED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:8:9-16:20
+	android:grantUriPermissions
+		ADDED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:12:13-47
+	android:authorities
+		ADDED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:10:13-110
+	android:exported
+		ADDED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:9:13-81
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:13:13-15:72
+	android:resource
+		ADDED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:15:17-69
+	android:name
+		ADDED from [:esys_flutter_share] /Users/meketiuk/Work/Coding/0xCompany/HOLD/build/esys_flutter_share/intermediates/library_manifest/release/AndroidManifest.xml:14:17-67
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1c37dcca22203f48ca5e5232f1e873bc/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:28:9-34:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1c37dcca22203f48ca5e5232f1e873bc/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1c37dcca22203f48ca5e5232f1e873bc/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:29:13-82
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1c37dcca22203f48ca5e5232f1e873bc/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:31:13-33:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1c37dcca22203f48ca5e5232f1e873bc/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:31:28-51
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1c37dcca22203f48ca5e5232f1e873bc/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:32:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:17.3.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/1c37dcca22203f48ca5e5232f1e873bc/jetified-firebase-messaging-17.3.4/AndroidManifest.xml:32:25-75
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:24:5-68
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:24:22-65
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:26:22-79
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:29:9-35:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:30:13-84
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:33:17-96
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:37:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:40:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:38:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:41:13-43:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:42:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:42:25-78
+service#com.google.firebase.iid.FirebaseInstanceIdService
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:50:9-56:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:52:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:51:13-77
+intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:53:13-55:29
+	android:priority
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:53:28-51
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:54:17-80
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:17.0.4] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/b98275379886eda633cc82b1ae911676/jetified-firebase-iid-17.0.4/AndroidManifest.xml:54:25-77
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/22c39947c60f495187b7fe9419c2522d/jetified-firebase-common-16.0.3/AndroidManifest.xml:10:9-14:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/22c39947c60f495187b7fe9419c2522d/jetified-firebase-common-16.0.3/AndroidManifest.xml:12:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/22c39947c60f495187b7fe9419c2522d/jetified-firebase-common-16.0.3/AndroidManifest.xml:13:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/22c39947c60f495187b7fe9419c2522d/jetified-firebase-common-16.0.3/AndroidManifest.xml:14:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:16.0.3] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/22c39947c60f495187b7fe9419c2522d/jetified-firebase-common-16.0.3/AndroidManifest.xml:11:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/907058c8fda5a869a0ed2fc8b5d28ef7/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/907058c8fda5a869a0ed2fc8b5d28ef7/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/907058c8fda5a869a0ed2fc8b5d28ef7/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/907058c8fda5a869a0ed2fc8b5d28ef7/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/58824e0d59f4c0a2839d49c41f90552e/jetified-play-services-basement-16.0.1/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/58824e0d59f4c0a2839d49c41f90552e/jetified-play-services-basement-16.0.1/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/meketiuk/.gradle/caches/transforms-2/files-2.1/58824e0d59f4c0a2839d49c41f90552e/jetified-play-services-basement-16.0.1/AndroidManifest.xml:24:13-58

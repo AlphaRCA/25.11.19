@@ -1,0 +1,11 @@
+framework module native_mixpanel {
+  umbrella header "native_mixpanel-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module native_mixpanel.Swift {
+    header "native_mixpanel-Swift.h"
+    requires objc
+}

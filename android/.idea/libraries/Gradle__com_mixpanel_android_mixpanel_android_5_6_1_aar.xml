@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.mixpanel.android:mixpanel-android:5.6.1@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fd589e72fd85669430265ae0388e66db/jetified-mixpanel-android-5.6.1/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fd589e72fd85669430265ae0388e66db/jetified-mixpanel-android-5.6.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fd589e72fd85669430265ae0388e66db/jetified-mixpanel-android-5.6.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mixpanel.android/mixpanel-android/5.6.1/47a560b44a8d4d6c21dbb8c86fb4c6af833ce4bb/mixpanel-android-5.6.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mixpanel.android/mixpanel-android/5.6.1/b2718e53429daf12aecd2c0c17a63a924c50da1b/mixpanel-android-5.6.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

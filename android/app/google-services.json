@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "970028943884",
+    "firebase_url": "https://hold-3ce71.firebaseio.com",
+    "project_id": "hold-3ce71",
+    "storage_bucket": "hold-3ce71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970028943884:android:85b51a39619cbf40bb3c29",
+        "android_client_info": {
+          "package_name": "uk.hold.hold"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970028943884-tais6kbbul3o2iob39m23pj3t2mpg9i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDG7_dFNKX2d_cqkowqFY7q1ooSmUU3qA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970028943884-tais6kbbul3o2iob39m23pj3t2mpg9i6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

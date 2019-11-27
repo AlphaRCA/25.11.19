@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/meketiuk/Work/Coding/0xCompany/HOLD/build/app/intermediates/incremental/mergeReleaseResources/merged.dir/values-v11/values-v11.xml",
+            "map": [
+                {
+                    "source": "/Users/meketiuk/.gradle/caches/transforms-2/files-2.1/fd589e72fd85669430265ae0388e66db/jetified-mixpanel-android-5.6.1/res/values-v11/values-v11.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "9",
+                        "endColumns": "12",
+                        "endOffsets": "596"
+                    }
+                }
+            ]
+        }
+    ]
+}

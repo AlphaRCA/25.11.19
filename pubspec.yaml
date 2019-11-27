@@ -1,0 +1,150 @@
+name: hold
+description: Mindfullness application
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.2.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^1.1.6
+  shared_preferences: ^0.5.3+4
+  page_indicator: ^0.3.0
+  oktoast: ^2.1.9
+  uuid: ^2.0.2
+  intl: ^0.15.8
+  flutter_svg: ^0.14.1
+  back_button_interceptor: ^4.0.6
+  infinite_listview: ^1.0.0
+  url_launcher: ^5.2.3
+  device_info: ^0.4.0+3
+  esys_flutter_share: ^1.0.2
+  file_picker: ^1.4.2
+  path_provider: ^1.1.0
+  webview_flutter: ^0.3.15+1
+  auto_size_text: ^2.1.0
+  flutter_spinkit: ^4.0.0
+  flip_card: 0.4.4
+  audioplayers: ^0.12.1
+  flutter_animation_set: ^0.0.4
+  facebook_app_events: ^0.5.0
+
+  http: ^0.12.0+2
+
+  native_mixpanel:
+    path: native_mixpanel
+  flutter_tts:
+    path: flutter_tts
+  coach_marks:
+    path: coach_marks
+
+  rxdart: 0.22.2
+  flutter_local_notifications: ^0.8.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mockito: ^3.0.0
+  flutter_driver:
+    sdk: flutter
+  test: ^1.6.1
+  clock: ^1.0.1
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/smile.png
+    - assets/sad.png
+    - icons/subscriptions.svg
+    - icons/pointer.svg
+    # Action
+    - assets/material_icons/rounded/action/home.svg
+    - assets/material_icons/rounded/action/trending_flat.svg
+    - assets/material_icons/rounded/action/delete_outline.svg
+    # AV
+    - assets/material_icons/rounded/av/play_arrow.svg
+    - assets/material_icons/rounded/av/pause.svg
+    - assets/material_icons/rounded/av/play_circle_outline.svg
+    - assets/material_icons/rounded/av/pause_circle_outline.svg
+    - assets/material_icons/rounded/av/fast_forward.svg
+    - assets/material_icons/rounded/av/fast_rewind.svg
+    - assets/material_icons/rounded/av/playlist_add.svg
+    # Navigation
+    - assets/material_icons/rounded/navigation/expand_more.svg
+    - assets/material_icons/rounded/navigation/expand_less.svg
+    - assets/material_icons/rounded/navigation/chevron_left.svg
+    - assets/material_icons/rounded/navigation/chevron_right.svg
+    - assets/material_icons/rounded/navigation/arrow_back.svg
+    - assets/material_icons/rounded/navigation/arrow_forward.svg
+    # Content
+    - assets/material_icons/rounded/content/add.svg
+    - assets/material_icons/rounded/content/report.svg
+    #
+    - assets/logo.png
+    - assets/logo_1.png
+    - assets/logo_2.png
+    - assets/loading.gif
+    - assets/Onboarding1.gif
+    - assets/Onboarding2.gif
+    - assets/Onboarding3.gif
+    - assets/Onboarding4.gif
+    - assets/subscriptions.png
+    - assets/audio_start.wav
+    - assets/audio_end.wav
+    - assets/audio_error.wav
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: Cabin
+      fonts:
+        - asset: fonts/Cabin-Regular.ttf
+        - asset: fonts/Cabin-Italic.ttf
+        - asset: fonts/Cabin-Medium.ttf
+        - asset: fonts/Cabin-Bold.ttf
+        - asset: fonts/Cabin-BoldItalic.ttf
+    - family: Hind
+      fonts:
+        - asset: fonts/Hind-Regular.ttf
+        - asset: fonts/Hind-Bold.ttf
+        - asset: fonts/Hind-Medium.ttf
+    - family: Lora
+      fonts:
+        - asset: fonts/Lora-Regular.ttf
+        - asset: fonts/Lora-Bold.ttf
+        - asset: fonts/Lora-Italic.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
