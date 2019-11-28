@@ -4,8 +4,6 @@ import 'package:hold/model/conversation_widget_content.dart';
 import 'package:hold/storage/storage_provider.dart';
 import 'package:rxdart/rxdart.dart';
 
-import 'mixpanel_provider.dart';
-
 class ConversationSearchBloc {
   static const SEARCH_THRESHOLD = 1;
 
@@ -45,16 +43,6 @@ class ConversationSearchBloc {
   Future _loadSearchedReflections(String search) async {
     List<ConversationWidgetContent> searchResult =
         await StorageProvider().getSearchedReflections(search);
-    if (searchResult == null || searchResult.length == 0) {
-      MixPanelProvider().trackEvent("CONVERSATIONS", {
-        "Pageview Search Result not found": DateTime.now().toIso8601String(),
-      });
-    } else {
-      MixPanelProvider().trackEvent("CONVERSATIONS", {
-        "Pageview Search Result updated": DateTime.now().toIso8601String(),
-        "count": searchResult.length
-      });
-    }
     print("LOADING search result for $search");
     _reflectionListController.add(searchResult);
   }

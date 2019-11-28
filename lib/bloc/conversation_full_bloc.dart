@@ -61,7 +61,7 @@ class ConversationFullBloc extends PlayController {
     playedItems.add(PlayedItem(answerInProgress.myText,
         title: answerInProgress.title,
         conversationCardId: answerInProgress.cardNumber,
-        inConversationContentId: answerInProgress.id));
+        reflectionId: answerInProgress.id));
     _reflection.additionals.add(answerInProgress);
     return answerInProgress.id;
   }

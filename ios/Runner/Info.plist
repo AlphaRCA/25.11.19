@@ -22,8 +22,21 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb821852964940676</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FacebookAppID</key>
+	<string>821852964940676</string>
+	<key>FacebookDisplayName</key>
+	<string>ALPHARCASDK</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppleEventsUsageDescription</key>
@@ -88,18 +101,5 @@
 	<string>yes</string>
 	<key>kTCCServiceMediaLibrary</key>
 	<string>We use it to collect data</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb821852964940676</string>
-			</array>
-		</dict>
-	</array>
-	<key>FacebookAppID</key>
-	<string>821852964940676</string>
-	<key>FacebookDisplayName</key>
-	<string>ALPHARCASDK</string>
 </dict>
 </plist>

@@ -8,7 +8,6 @@ import 'package:file_picker/file_picker.dart';
 import 'package:hold/bloc/preferences_provider.dart';
 import 'package:hold/storage/storage_provider.dart';
 
-import 'mixpanel_provider.dart';
 
 class DataOverallBloc {
   StreamController<bool> _hasDataController = new StreamController();
@@ -23,8 +22,6 @@ class DataOverallBloc {
   }
 
   Future clearData() async {
-    MixPanelProvider().trackEvent(
-        "PROFILE", {"Click Clear my data": DateTime.now().toIso8601String()});
     await StorageProvider().clearMyData();
     await PreferencesProvider().saveHighestConversationLevel(1);
     await PreferencesProvider().saveHighestCollectionLevel(1);
@@ -48,8 +45,6 @@ class DataOverallBloc {
   }
 
   Future exportData() async {
-    MixPanelProvider().trackEvent(
-        "PROFILE", {"Click Export": DateTime.now().toIso8601String()});
     String fileContent = await StorageProvider().exportToFile();
     print("FILE CONTENT: $fileContent");
     try {

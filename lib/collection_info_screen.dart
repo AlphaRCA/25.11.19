@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/preferences_provider.dart';
 import 'package:hold/constants/app_sizes.dart';
 import 'package:hold/conversation_selection_screen.dart';
@@ -27,7 +28,6 @@ import 'package:hold/widget/screen_parts/question_tabs.dart';
 import 'package:hold/widget/stick_position.dart';
 
 import 'bloc/collection_info_bloc.dart';
-import 'bloc/mixpanel_provider.dart';
 import 'constants/app_colors.dart';
 import 'constants/app_styles.dart';
 
@@ -113,9 +113,6 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
       });
     }
     super.initState();
-    MixPanelProvider().trackEvent("COLLECTION", {
-      "Pageview Collection Info": DateTime.now().toIso8601String(),
-    });
     _showCoachMark();
 
     controller.addListener(_scrollListener);
@@ -151,10 +148,6 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
                   stream: widget.bloc.collectionTitle,
                   initialData: "Loading...",
                   builder: (BuildContext ctxt, AsyncSnapshot<String> data) {
-                    MixPanelProvider().trackEvent("COLLECTION", {
-                      "Pageview ${data.data} Collection":
-                          DateTime.now().toIso8601String()
-                    });
                     return Text(data.data);
                   },
                 ),
@@ -265,9 +258,6 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
                                   }),
                             );
                           } else {
-                            MixPanelProvider().trackEvent("COLLECTION", {
-                              "Length": list.length,
-                            });
                             //widget.bloc.formShortKeys();
                             return ListView.builder(
                                 controller: listView2ScrollController,
@@ -539,20 +529,11 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
       mainText:
           "Are you sure you want to delete '${widget.bloc.collectionTitleFinal}'?",
       yesAction: () {
-        MixPanelProvider().trackEvent("COLLECTION", {
-          "Click Delete Collection": DateTime.now().toIso8601String(),
-          "button": "yes"
-        });
         widget.bloc.deleteCollection();
       },
       title: "Delete collection",
       titleIcon: Icons.delete_outline,
-      noAction: () {
-        MixPanelProvider().trackEvent("COLLECTION", {
-          "Click Delete Collection": DateTime.now().toIso8601String(),
-          "button": "no"
-        });
-      },
+      noAction: () {},
       toastText: "Collection '${widget.bloc.collectionTitleFinal}' deleted",
     );
     if (result ?? false) Navigator.of(context).pop(true);
@@ -596,6 +577,8 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
                   print("screenPart: ${data.data}");
                   return Text(
                     widget.bloc.getScreenPart(data.data) ?? "Untitled",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(
                       fontSize: 21.13,
                       color: AppColors.TEXT_EF,
@@ -737,9 +720,6 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
   }
 
   void _openAddScreen() async {
-    MixPanelProvider().trackEvent("COLLECTION", {
-      "Click Add Conversations Button": DateTime.now().toIso8601String(),
-    });
     await Navigator.of(context).push(MaterialPageRoute(
         builder: (context) => ConversationSelectionScreen(
               collectionId: widget.bloc.collectionId,
@@ -749,9 +729,6 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
   }
 
   void _showReview() {
-    MixPanelProvider().trackEvent("COLLECTION", {
-      "Show Review options": DateTime.now().toIso8601String(),
-    });
     WidgetsBinding.instance.addPostFrameCallback((_) {
       final RenderBox containerRenderBox =
           _reviewSectionTitleKey.currentContext.findRenderObject();
@@ -794,9 +771,6 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
   }
 
   void _onCreateAnswer(EditableUIQuestion question) {
-    MixPanelProvider().trackEvent("COLLECTION", {
-      "Click Review Collection Box": DateTime.now().toIso8601String(),
-    });
     _answeredQuestion = question;
     setState(() {
       _showButton = true;
@@ -807,36 +781,16 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
 
   void _showInfo(String questionTitle, String longDescription, int level) {
     if (screenState == InfoScreenState.reviewQuestionSelection) {
-      MixPanelProvider().trackEvent("REFLECT", {
-        "Click Info Icon Review": DateTime.now().toIso8601String(),
-      });
-      MixPanelProvider().trackEvent("REFLECT", {
-        "Click Info Icon Review title": questionTitle,
-      });
-      MixPanelProvider().trackEvent("REFLECT", {
-        "Click Info Icon Review Description": longDescription,
-      });
-    } else {
-      MixPanelProvider().trackEvent("COLLECTION", {
-        "Click Info Icon Say More": DateTime.now().toIso8601String(),
-      });
-    }
+    } else {}
     DialogLaunchers.showInfo(context, questionTitle, longDescription);
   }
 
   void _cancelAnswering() async {
-    MixPanelProvider().trackEvent("COLLECTION", {
-      "Cancel reviewing": DateTime.now().toIso8601String(),
-    });
     DialogLaunchers.showAnimatedDelete(
       context,
       title: "Delete section",
       mainText: "Are you sure you want to delete this part of this collection?",
       yesAction: () {
-        MixPanelProvider().trackEvent("COLLECTION", {
-          "Click Delete Section": DateTime.now().toIso8601String(),
-          "button": "yes"
-        });
         widget.bloc.deleteCollection();
         _answeredQuestion = null;
         setState(() {
@@ -844,15 +798,7 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
         });
       },
       titleIcon: Icons.delete_outline,
-      noAction: () {
-        MixPanelProvider().trackEvent(
-          "COLLECTION",
-          {
-            "Click Delete Section": DateTime.now().toIso8601String(),
-            "button": "no"
-          },
-        );
-      },
+      noAction: () {},
       toastText: "Part of the collection deleted",
     );
   }
@@ -880,9 +826,6 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
   }
 
   void _expandControls() {
-    MixPanelProvider().trackEvent("COLLECTION", {
-      "Expand controls": DateTime.now().toIso8601String(),
-    });
     setState(() {
       _hasExpandedControls = true;
       _isExpandedView = false;
@@ -900,6 +843,11 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
     Reflection reflection = new Reflection(0, _answeredQuestion.title,
         _answeredQuestion.level, _answeredQuestion.id);
     reflection.myText = _answer;
+    MixPanelProvider().trackEvent("Review Collection", {
+      "Click Next Review Tool": DateTime.now().toIso8601String(),
+      "Title Review Tool": _answeredQuestion.title,
+      "Stage Review Tool": _answeredQuestion.subtitle
+    });
     await widget.bloc.saveAnswer(reflection);
     setState(() {
       screenState = InfoScreenState.completeable;
@@ -907,9 +855,6 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
   }
 
   void _showKeyboard() {
-    MixPanelProvider().trackEvent("COLLECTION", {
-      "CClick Write Review Button": DateTime.now().toIso8601String(),
-    });
     setState(() {
       _keyboardState = ButtonOptions.voice;
     });
@@ -917,9 +862,6 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
   }
 
   Future _showVoice() async {
-    MixPanelProvider().trackEvent("COLLECTION", {
-      "Click Speak Review Button": DateTime.now().toIso8601String(),
-    });
     if (await inputFieldKey.currentState.showVoice())
       setState(() {
         _keyboardState = ButtonOptions.keyboard;
@@ -1201,9 +1143,6 @@ class _CollectionInfoScreenState extends State<CollectionInfoScreen> {
   }
 
   void _showReviewCoach() async {
-    MixPanelProvider().trackEvent("COLLECTION", {
-      "Review collection Button": DateTime.now().toIso8601String(),
-    });
     if (!await PreferencesProvider().getFirstReviewCoachMark()) {
       showOverlayEntry(tagName: 'reviewSection');
     }

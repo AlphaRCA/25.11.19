@@ -201,6 +201,10 @@ class Reminder {
     }
   }
 
+  int getCardNum(){
+    return cardNum;
+  }
+
   int getDatabaseRepeat() {
     return repeatWeekly ? 1 : 0;
   }

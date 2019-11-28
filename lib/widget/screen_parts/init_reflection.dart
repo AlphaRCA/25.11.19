@@ -20,8 +20,6 @@ class InitReflection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MixPanelProvider().trackEvent(
-        "HOME", {"Pageview Home": DateTime.now().toIso8601String()});
     return FutureBuilder<Map<int, EditableUIText>>(
         future: StorageProvider().getUITexts([
           EditableUIText.HOMEPAGE_ACTION_STATEMENT,
@@ -83,11 +81,7 @@ class InitReflection extends StatelessWidget {
                                     .text,
                                 AppColors.INVITE_QUESTION_REFLECTION,
                                 (height, width, offset) async {
-                              MixPanelProvider().trackEvent("HOME", {
-                                "Click Say More Arrow":
-                                    DateTime.now().toIso8601String(),
-                                "type": "question"
-                              });
+                              _eventStartConversation("Express");
                               _openConversationScreen(context, ReflectionType.B,
                                   height, width, offset);
                             }, new GlobalKey(), containerKey),
@@ -105,9 +99,7 @@ class InitReflection extends StatelessWidget {
                                       .text,
                                   AppColors.INVITE_THOUGHT_REFLECTION,
                                   (height, width, offset) async {
-                            MixPanelProvider().trackEvent("CONVERSATION", {
-                              "Click Ask Home": DateTime.now().toIso8601String()
-                            });
+                            _eventStartConversation("Question");
                             _openConversationScreen(context, ReflectionType.A,
                                 height, width, offset);
                           }, new GlobalKey(), containerKey))
@@ -118,6 +110,11 @@ class InitReflection extends StatelessWidget {
             ],
           );
         });
+  }
+
+  void _eventStartConversation(value) {
+    MixPanelProvider()
+        .trackEvent("Start Conversation", {"Conversation Type": value});
   }
 
   void _openConversationScreen(

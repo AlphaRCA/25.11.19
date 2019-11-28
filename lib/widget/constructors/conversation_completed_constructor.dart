@@ -55,6 +55,11 @@ class ConversationCompletedConstructor extends ConversationConstructor {
         setActiveAction(ActiveActions.nothing);
         break;
       case _Step.reflecting:
+        MixPanelProvider().trackEvent("Reflect Conversation", {
+          "Click Next Reflect Tool": DateTime.now().toIso8601String(),
+          "Title Reflect Tool": bloc.answerInProgress.title,
+          "Stage Reflect Tool": "Stage : ${bloc.answerInProgress.level}"
+        });
         await bloc.saveAdditional();
         finishedParts
             .add(getFinishedAdditional(bloc.answerInProgress.toPlayedText()));
@@ -63,6 +68,7 @@ class ConversationCompletedConstructor extends ConversationConstructor {
         setActiveAction(ActiveActions.complete);
         break;
       case _Step.ready:
+        print("_Step.ready");
         finish();
         break;
     }
@@ -101,11 +107,8 @@ class ConversationCompletedConstructor extends ConversationConstructor {
   }
 
   void _createNewAnswer(EditableUIQuestion question) {
+    print("_createNewAnswer   -------------------------${question}");
     if (question != null) {
-      MixPanelProvider().trackEvent("CONVERSATION", {
-        "Click Method Button": DateTime.now().toIso8601String(),
-        "question": question.title
-      });
       activePart = _getAnswerOnQuestion(question);
       activePart2 = null;
       _step = _Step.reflecting;

@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hold/bloc/preferences_provider.dart';
-import 'package:hold/utils/notification_manager.dart';
 import 'package:hold/storage/storage_provider.dart';
 import 'package:hold/utils/dispose_primary_fucus.util.dart';
+import 'package:hold/utils/notification_manager.dart';
 import 'package:hold/widget/dialogs/dialog_was_it_helpful.dart';
 import 'package:hold/widget/dialogs/dialog_yes_no_cancel.dart';
 import 'package:hold/widget/launchers/dialog_launchers.dart';
@@ -15,8 +15,6 @@ import 'package:hold/widget/screen_parts/init_reflection.dart';
 import 'package:hold/widget/screen_parts/library_page.dart';
 import 'package:hold/widget/screen_parts/profile_page.dart';
 import 'package:hold/widget/screen_parts/recent_activity_page.dart';
-
-import 'bloc/mixpanel_provider.dart';
 import 'bloc/notification_bloc.dart';
 import 'constants/app_colors.dart';
 import 'constants/app_sizes.dart';
@@ -78,8 +76,6 @@ class _MainScreenState extends State<MainScreen>
                 icon: Icon(Icons.account_circle, key: profileKey),
                 color: AppColors.ONBOARDING_BACK,
                 onPressed: () {
-                  MixPanelProvider().trackEvent("HOME",
-                      {"Click Say Profile": DateTime.now().toIso8601String()});
                   _showPrevScreen();
                 },
                 tooltip: "profile",
@@ -91,8 +87,6 @@ class _MainScreenState extends State<MainScreen>
                       color: AppColors.ONBOARDING_BACK,
                     ),
                     onPressed: () {
-                      MixPanelProvider().trackEvent("HOME",
-                          {"Click Say Home": DateTime.now().toIso8601String()});
                       _showPrevScreen();
                     },
                     tooltip: "home",
@@ -296,23 +290,14 @@ class _MainScreenState extends State<MainScreen>
         await PreferencesProvider().getMyNotificationsEnabled()) {
       if (await StorageProvider().getCompletedConversationCount() % 3 == 0) {
         bool dialogResult;
-        MixPanelProvider().trackEvent("REFLECT", {
-          "Pageview Come Back Pop Up": DateTime.now().toIso8601String(),
-        });
         await DialogLaunchers.showDialog(
           context: context,
           dialog: DialogYesNoCancel(
             "Do you want to remind yourself to come back to this?",
             () {
-              MixPanelProvider().trackEvent("REFLECT", {
-                "Click Yes Come Back Button": DateTime.now().toIso8601String(),
-              });
               dialogResult = true;
             },
             noAction: () {
-              MixPanelProvider().trackEvent("REFLECT", {
-                "Click No Come Back Button": DateTime.now().toIso8601String(),
-              });
               dialogResult = false;
             },
             title: "Come back to this?",

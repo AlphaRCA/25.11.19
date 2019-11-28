@@ -48,4 +48,11 @@ class CollectionInStorage {
       : id = map[COLUMN_ID],
         title = map[COLUMN_TITLE],
         creationDate = DateTime.fromMicrosecondsSinceEpoch(map[COLUMN_CREATED]);
+
+  @override
+  String toString() {
+    return 'CollectionInStorage{id: $id, title: $title, creationDate: $creationDate}';
+  }
+
+
 }

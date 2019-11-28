@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/play_controller.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/model/played_item.dart';
@@ -27,12 +26,6 @@ class PlayAction extends StatelessWidget {
           return GestureDetector(
             onTap: () {
               print("GESTURE ACTION $isPlaying");
-              MixPanelProvider().trackEvent("REFLECT", {
-                isPlaying
-                        ? "Click Listen to conversation Button"
-                        : "Click Pause conversation Button":
-                    DateTime.now().toIso8601String(),
-              });
               if (isPlaying) {
                 playController.pauseVoice();
               } else {

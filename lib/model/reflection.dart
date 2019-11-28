@@ -82,4 +82,11 @@ class Reflection {
     return new PlayedItem(myText,
         conversationCardId: cardNumber, reflectionId: id, title: title);
   }
+
+  @override
+  String toString() {
+    return 'Reflection{id: $id, cardNumber: $cardNumber, questionId: $questionId, level: $level, title: $title, myText: $myText, created: $created}';
+  }
+
+
 }

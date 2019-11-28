@@ -46,7 +46,11 @@ class _RemindersListState extends State<RemindersList> {
                   "Notifications",
                   style: AppStyles.PROFILE_TEXT,
                 ),
-                onChanged: widget.bloc.switchAllNotifications,
+                onChanged: (value) {
+                  MixPanelProvider()
+                      .trackPeopleProperties({"Notifications Enabled": value});
+                  widget.bloc.switchAllNotifications(value);
+                },
               ),
             );
           },
@@ -80,6 +84,8 @@ class _RemindersListState extends State<RemindersList> {
                   builder: (BuildContext context,
                       AsyncSnapshot<List<Reminder>> data) {
                     List<Reminder> list = data.data;
+                    MixPanelProvider().trackPeopleProperties(
+                        {"# Reminders": list.length});
                     return ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
@@ -143,34 +149,15 @@ class _RemindersListState extends State<RemindersList> {
                                         color: AppColors.REMINDER_EDITION_TEXT,
                                       ),
                                       onPressed: () {
-                                        MixPanelProvider().trackEvent(
-                                            "PROFILE", {
-                                          "Pageview Delete Reminder Pop Up":
-                                              DateTime.now().toIso8601String()
-                                        });
                                         DialogLaunchers.showDialog(
                                           context: context,
                                           dialog: DialogYesNoCancel(
                                             "Are you sure you want to delete this reminder?",
                                             () {
-                                              MixPanelProvider().trackEvent(
-                                                  "PROFILE", {
-                                                "Click Delete Reminder Button Yes":
-                                                    DateTime.now()
-                                                        .toIso8601String()
-                                              });
-
                                               widget.bloc.deleteReminder(
                                                   list[index].id);
                                             },
-                                            noAction: () {
-                                              MixPanelProvider().trackEvent(
-                                                  "PROFILE", {
-                                                "Click Delete Reminder Button No":
-                                                    DateTime.now()
-                                                        .toIso8601String()
-                                              });
-                                            },
+                                            noAction: () {},
                                             title: "Delete reminder",
                                             icon: Icons.alarm,
                                           ),
@@ -201,8 +188,6 @@ class _RemindersListState extends State<RemindersList> {
           },
         ),
         GreenAction("ADD REMINDER", () async {
-          MixPanelProvider().trackEvent("PROFILE",
-              {"Click Add Reminder Button": DateTime.now().toIso8601String()});
           widget.bloc.createGeneralReminder();
           bool result =
               await DialogLaunchers.showReminderDialog(context, widget.bloc);

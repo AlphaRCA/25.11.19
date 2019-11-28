@@ -35,13 +35,13 @@ class ConversationConstructor {
 
   ConversationConstructor(this._playController, this.screenWidth);
 
-  void showVoice(TextVoiceState inputStateKey, bool isReflect) async {
+  void showVoice(
+      TextVoiceState inputStateKey, bool isReflect, int number) async {
     if (await inputStateKey.showVoice()) {
       lastTypingAction = ActiveActions.voiceVisible;
-
-      MixPanelProvider().trackEvent(isReflect ? "REFLECT" : "CONVERSATION", {
-        "Click Speak Conversation Button": DateTime.now().toIso8601String()
-      });
+      if (!isReflect) {
+        _eventInputData("Speak", number);
+      }
       print("show voice");
       print("text length is ${inputStateKey.textController.text.length}");
       if (inputStateKey.textController.text.length > 0) {
@@ -52,18 +52,25 @@ class ConversationConstructor {
     }
   }
 
-  void showKeyboard(TextVoiceState inputStateKey, bool isReflect) {
-    MixPanelProvider().trackEvent(isReflect ? "REFLECT" : "CONVERSATION",
-        {"Click Write Conversation Button": DateTime.now().toIso8601String()});
+  void showKeyboard(TextVoiceState inputStateKey, bool isReflect, int number) {
     lastTypingAction = ActiveActions.typeVisible;
     print("show keyboard");
+    if (!isReflect) {
+      _eventInputData("Write", number);
+    }
     inputStateKey.showKeyboard();
-    print("text length is ${inputStateKey.textController.text.length}");
     if (inputStateKey.textController.text.length > 0) {
       setActiveAction(ActiveActions.typingInProgress);
     } else {
       setActiveAction(ActiveActions.typeVisible);
     }
+  }
+
+  void _eventInputData(value, number) {
+    MixPanelProvider()
+        .trackSuperPropertyProperties({"# of Conversations started ": number});
+    MixPanelProvider().trackEvent(
+        "Pageview Conversation Creation", {"Input mode Conversation": value});
   }
 
   void makeNextAvailable() {

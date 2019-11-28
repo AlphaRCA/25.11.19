@@ -38,11 +38,11 @@
 		</data>
 		<key>MiniNotificationViewController.nib/objects-13.0+.nib</key>
 		<data>
-		qB8x3trrcSSskF8t9Yr6dkmU3kc=
+		99OsUqCRUWI9aBcpMYvgwsDFg/0=
 		</data>
 		<key>MiniNotificationViewController.nib/runtime.nib</key>
 		<data>
-		yKr79nuVFEMMF3YZ/Gxr7q0Odtg=
+		/vwJN/+DYg34kVy4bWWgvWoYrqQ=
 		</data>
 		<key>Modules/Mixpanel.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -66,27 +66,27 @@
 		</data>
 		<key>TakeoverNotificationViewController~ipad.nib/objects-13.0+.nib</key>
 		<data>
-		Q/863Ehu5RBjlbX551prgz5GwOY=
+		53BKq7HgDOLUWe1S2ba+Q8b8fpE=
 		</data>
 		<key>TakeoverNotificationViewController~ipad.nib/runtime.nib</key>
 		<data>
-		EzATRQw6kgEHh3HG5wqaVD8F1Rw=
+		X5rHfq0zAlZL/T6f+xHDmaHeGz0=
 		</data>
 		<key>TakeoverNotificationViewController~iphonelandscape.nib/objects-13.0+.nib</key>
 		<data>
-		Cel2SFXhbrBcnEbmoyr/jJX16T0=
+		OJx//YIL1MsGRPHy2KivA2v7CrQ=
 		</data>
 		<key>TakeoverNotificationViewController~iphonelandscape.nib/runtime.nib</key>
 		<data>
-		cBIleExdfoybFeMd8sV4kodr7tc=
+		hRJLdGNvDqdr7MvbdVySk1zVo3w=
 		</data>
 		<key>TakeoverNotificationViewController~iphoneportrait.nib/objects-13.0+.nib</key>
 		<data>
-		IXFzc5uVeJ1svP9XyPiId37jIWU=
+		hU8Ui4z8x9asLFSYc9WstYrTD/8=
 		</data>
 		<key>TakeoverNotificationViewController~iphoneportrait.nib/runtime.nib</key>
 		<data>
-		vvUejbBn9AHgeyyF7Wrn0dC9jRc=
+		p6ZK6qlTmNj1e1nIGzO8ENeVMYI=
 		</data>
 		<key>placeholder-image.png</key>
 		<data>
@@ -176,22 +176,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qB8x3trrcSSskF8t9Yr6dkmU3kc=
+			99OsUqCRUWI9aBcpMYvgwsDFg/0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z7TRMEnWn6gEikAGUtyKfxqW1tJyqFHG+T/uD5AfFWs=
+			k7+bqUhz0LulKzHA1NxzZ4tdd1M5X7WMVX8IkmrNRmE=
 			</data>
 		</dict>
 		<key>MiniNotificationViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yKr79nuVFEMMF3YZ/Gxr7q0Odtg=
+			/vwJN/+DYg34kVy4bWWgvWoYrqQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			xTJRbhPRUtBSvLMymuDQhkCwlA0wP9YbQXBrStxf1Pw=
+			hGOZukcNN4B2Qd23omQFaYrtvHswPmEXoRaIgX4Lmh0=
 			</data>
 		</dict>
 		<key>Modules/Mixpanel.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -253,66 +253,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Q/863Ehu5RBjlbX551prgz5GwOY=
+			53BKq7HgDOLUWe1S2ba+Q8b8fpE=
 			</data>
 			<key>hash2</key>
 			<data>
-			ljW4dX+yXtAKwnZ7AZFR7Y1dEdGW5c5LZPKIzvOps9g=
+			0w/9lHDVEhqcZOFkSW6323ABTTOX2Kst8wxrS+T5r4U=
 			</data>
 		</dict>
 		<key>TakeoverNotificationViewController~ipad.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EzATRQw6kgEHh3HG5wqaVD8F1Rw=
+			X5rHfq0zAlZL/T6f+xHDmaHeGz0=
 			</data>
 			<key>hash2</key>
 			<data>
-			RYgbiELCH0/fTkdG5EJ5GOTspbIM5JQk9WypzPvbHbY=
+			ZumL6ITrE+UzV4/H93jkXWFqhyCRdrSFcPMpbOMtsN0=
 			</data>
 		</dict>
 		<key>TakeoverNotificationViewController~iphonelandscape.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Cel2SFXhbrBcnEbmoyr/jJX16T0=
+			OJx//YIL1MsGRPHy2KivA2v7CrQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			gUI5jq+kEU7egsb4wxsAVVCeQ9n10cNnLJHJuustPTQ=
+			RtrfP9VKML41A0wCBS65aVT4FxF+D2rPrvlzq36+FeU=
 			</data>
 		</dict>
 		<key>TakeoverNotificationViewController~iphonelandscape.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cBIleExdfoybFeMd8sV4kodr7tc=
+			hRJLdGNvDqdr7MvbdVySk1zVo3w=
 			</data>
 			<key>hash2</key>
 			<data>
-			rrxrvcIQ5Mlzo5kp/jEkX2Wkq36eCoylGDODR0xmVcQ=
+			PrxKLOIYbgaFImA3hGby9E0I5cGtN6bxvmd/MD/QMmM=
 			</data>
 		</dict>
 		<key>TakeoverNotificationViewController~iphoneportrait.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IXFzc5uVeJ1svP9XyPiId37jIWU=
+			hU8Ui4z8x9asLFSYc9WstYrTD/8=
 			</data>
 			<key>hash2</key>
 			<data>
-			+JSvrmEPrXSBPipgeAQT+HCItZryJh4jOpKCMoDBBdI=
+			q05PDoUsA9oWQiOvttg5x99Jr7alLoJG3CxJtVXzbpc=
 			</data>
 		</dict>
 		<key>TakeoverNotificationViewController~iphoneportrait.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vvUejbBn9AHgeyyF7Wrn0dC9jRc=
+			p6ZK6qlTmNj1e1nIGzO8ENeVMYI=
 			</data>
 			<key>hash2</key>
 			<data>
-			EtkOvzU1NOjg++UCWCe8m4yyA11dbo+mt7UBHGxtAZ8=
+			bt59k8fIYnQYSUrtwDAgtFemdb2CmsZqOSYI+BNQTx4=
 			</data>
 		</dict>
 		<key>placeholder-image.png</key>

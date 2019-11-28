@@ -5,7 +5,6 @@ import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_set/animation_set.dart';
 import 'package:flutter_animation_set/animator.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/speech_recognition_bloc.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/widget/dialogs/dialog_no_internet.dart';
@@ -69,9 +68,6 @@ class DictateButton extends StatelessWidget {
                 onPointerDown: (details) async {
                   _bloc.reinit();
                   if (await _isInternetAvailable()) {
-                    MixPanelProvider().trackEvent("CONVERSATION", {
-                      "Click Mic Button": DateTime.now().toIso8601String(),
-                    });
                     await AudioCache().play("audio_start.wav");
                     if (!availabilityState) {
                       _bloc.start();

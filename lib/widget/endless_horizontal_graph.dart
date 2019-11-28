@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/recent_activity_bloc.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/storage/graph_value.dart';
@@ -140,9 +139,6 @@ class EndlessHorizontalGraphState extends State<EndlessHorizontalGraph> {
   bool isHighlight(int index) => _highlightedIitemIndex == index;
 
   void _selectIndex(int index, int id) {
-    MixPanelProvider().trackEvent("CONVERSATIONS", {
-      "Click Emotion Log Item": DateTime.now().toIso8601String(),
-    });
     setState(() {
       _highlightedIitemIndex = index;
     });

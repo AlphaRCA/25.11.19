@@ -1,7 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/constants/app_sizes.dart';
 import 'package:hold/storage/editable_ui_question.dart';
@@ -132,10 +131,6 @@ class QuestionWidget extends StatelessWidget {
                         ),
                         onPressed: active
                             ? () {
-                                MixPanelProvider().trackEvent("REFLECT", {
-                                  "Click  ": question.title,
-                                  "Tier ": "${question.level} Tool"
-                                });
                                 clickAction(question);
                               }
                             : () {

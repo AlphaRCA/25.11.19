@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/play_text_provider.dart';
 import 'package:hold/bloc/preferences_provider.dart';
 import 'package:hold/model/continue_condition.dart';
@@ -39,11 +38,6 @@ class PlayController {
   }
 
   void _playNextPointer(bool playIsActive) async {
-    MixPanelProvider().trackEvent("COLLECTION", {
-      playIsActive
-          ? "Click Play Collection Button"
-          : "Click Pause Collection Button": DateTime.now().toIso8601String()
-    });
     bool canPlayNext = false;
     if (_innerPointer != null && (_innerPointer + 1) < playedItems.length) {
       canPlayNext = continueCondition.canPlay(
@@ -54,10 +48,7 @@ class PlayController {
     } else {
       print("no more items");
     }
-    if (!playIsActive &&
-        !isPaused &&
-        (_innerPointer + 1) < playedItems.length &&
-        canPlayNext) {
+    if (!playIsActive && !isPaused && canPlayNext) {
       _playNextItem();
     } else {
       if (!playIsActive) {

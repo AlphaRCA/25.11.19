@@ -29,10 +29,6 @@ class _LibraryPageState extends State<LibraryPage> {
   void initState() {
     SchedulerBinding.instance.addPostFrameCallback(_createCoach);
     super.initState();
-    MixPanelProvider().trackEvent("COLLECTIONS", {
-      "Pageview Conversations Browsing Collection":
-          DateTime.now().toIso8601String(),
-    });
     _showCoachMark();
   }
 
@@ -65,6 +61,8 @@ class _LibraryPageState extends State<LibraryPage> {
             builder: (BuildContext context,
                 AsyncSnapshot<List<CollectionShortData>> data) {
               List<CollectionShortData> list = data.data;
+              MixPanelProvider().trackPeopleProperties(
+                  {"# Collections": "${list.length}"});
               if (list.length == 0) return Container();
               return ListView.builder(
                   physics: NeverScrollableScrollPhysics(),
@@ -117,9 +115,6 @@ class _LibraryPageState extends State<LibraryPage> {
   }
 
   void _openCollectionCreation() async {
-    MixPanelProvider().trackEvent("COLLECTIONS", {
-      "Click Create Collection Button": DateTime.now().toIso8601String(),
-    });
     await Navigator.of(context).push(
         MaterialPageRoute(builder: (context) => ConversationSelectionScreen()));
     bloc.reloadCollections();
@@ -130,8 +125,8 @@ class _LibraryPageState extends State<LibraryPage> {
       context: context,
       defaultPadding: 0,
       tagName: 'collection',
-      bgColor: Colors.black.withOpacity(
-          0.75), // Optional. uses black color with 0.4 opacity by default
+      bgColor: Colors.black.withOpacity(0.75),
+      // Optional. uses black color with 0.4 opacity by default
       onTap: () {
         PreferencesProvider().saveFirstInReviewCoachMark();
         hideOverlayEntryIfExists();

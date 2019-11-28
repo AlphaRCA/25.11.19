@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:device_info/device_info.dart';
 import 'package:flutter/services.dart';
 import 'package:hold/bloc/preferences_provider.dart';
-import 'package:hold/storage/storage_provider.dart';
 import 'package:native_mixpanel/native_mixpanel.dart';
 
 class MixPanelProvider {
@@ -33,7 +32,7 @@ class MixPanelProvider {
     else
       eventName = "App Open";
     try {
-      await mixpanel.initialize('f8c3570e49e71f6bc002a5030982ebb1');
+      await mixpanel.initialize('6fa6516c702c2e2c63fee644cbf313fd');
       await mixpanel.identify(uid);
       await mixpanel
           .track(eventName, {'DateTime': DateTime.now().toIso8601String()});
@@ -57,12 +56,6 @@ class MixPanelProvider {
       } else {
         map["device"] = "Unknown";
       }
-      map["number_of_conversations_in_db"] =
-          await StorageProvider().getConversationCount();
-      map["number_of_collections_in_db"] =
-          await StorageProvider().getCollectionsCount();
-      map["number_of_subreflections_in_db"] =
-          await StorageProvider().getReflectionsCount();
       await mixpanel.setPeopleProperties(map);
       print("Mixpanel init finished");
     } catch (e) {
@@ -80,6 +73,34 @@ class MixPanelProvider {
       }
     } on PlatformException {
       print('Failed to send event: $eventName');
+    }
+  }
+
+  Future trackPeopleProperties(Map<String, dynamic> map) async {
+    try {
+      await initialized;
+      await mixpanel.setPeopleProperties(map);
+    } on PlatformException {
+      print('Failed to send peope Properties: $map');
+    }
+  }
+
+  Future trackSuperPropertyProperties(Map<String, dynamic> map) async {
+    try {
+      await initialized;
+      await mixpanel.registerSuperProperties(map);
+    } on PlatformException {
+      print('Failed to send peope Properties: $map');
+    }
+  }
+
+  Future trackIncrement(String eventName) async {
+    try {
+      print("let's track increment");
+      await initialized;
+      await mixpanel.increment(eventName);
+    } on PlatformException {
+      print('Failed to send peope Properties: $eventName');
     }
   }
 

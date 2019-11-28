@@ -18,7 +18,6 @@ import 'package:hold/widget/constructors/conversation_completed_constructor.dart
 import 'package:hold/widget/constructors/conversation_constructor.dart';
 import 'package:hold/widget/launchers/dialog_launchers.dart';
 
-import 'bloc/mixpanel_provider.dart';
 import 'bloc/notification_bloc.dart';
 import 'constants/app_sizes.dart';
 import 'main.dart';
@@ -56,7 +55,7 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
   final GlobalKey titleTextKey = new GlobalKey();
 
   ScrollController scrollController;
-  ScrollController nestedController = new ScrollController();
+  ScrollController nestedController;
   double appBarLeftPadding = 0.0;
   double appBarSubtitleOpacity = 1.0;
 
@@ -83,9 +82,6 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
 
   @override
   void initState() {
-    MixPanelProvider().trackEvent("REFLECT", {
-      "Click Open Conversation": DateTime.now().toIso8601String(),
-    });
     constructor = new ConversationCompletedConstructor(
         widget.bloc,
         _showInfo,
@@ -94,6 +90,7 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
         MyApp.screenWidth);
     SchedulerBinding.instance.addPostFrameCallback(_createCoach);
 
+    nestedController = new ScrollController();
     nestedController.addListener(_myScroll());
     scrollController = new ScrollController();
     scrollController.addListener(_scrollListener);
@@ -183,6 +180,8 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
                                 child: Text(
                                   content.mainConversation.title,
                                   textAlign: TextAlign.left,
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
@@ -234,7 +233,6 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
             initialData: ActiveActions.nothing,
             builder: (BuildContext context, AsyncSnapshot<ActiveActions> data) {
               print("active action is ${data.data}");
-
               bottomPadding = AppSizes.BOTTOM_BUTTON_SIZE;
 
               switch (data.data) {
@@ -254,11 +252,11 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
                   return TypingActions(
                     () {
                       constructor.showKeyboard(
-                          constructor.inputFieldKey.currentState, true);
+                          constructor.inputFieldKey.currentState, true, 0);
                     },
                     () {
                       constructor.showVoice(
-                          constructor.inputFieldKey.currentState, true);
+                          constructor.inputFieldKey.currentState, true, 0);
                     },
                     constructor.next,
                     AppColors.BOTTOM_BAR_DISABLED,
@@ -268,11 +266,11 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
                   return TypingActions(
                     () {
                       constructor.showKeyboard(
-                          constructor.inputFieldKey.currentState, true);
+                          constructor.inputFieldKey.currentState, true, 0);
                     },
                     () {
                       constructor.showVoice(
-                          constructor.inputFieldKey.currentState, true);
+                          constructor.inputFieldKey.currentState, true, 0);
                     },
                     constructor.next,
                     AppColors.BOTTOM_BAR_DISABLED,
@@ -282,25 +280,28 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
                   return TypingActions(
                     () {
                       constructor.showKeyboard(
-                          constructor.inputFieldKey.currentState, true);
+                          constructor.inputFieldKey.currentState, true, 0);
                     },
                     () {
                       constructor.showVoice(
-                          constructor.inputFieldKey.currentState, true);
+                          constructor.inputFieldKey.currentState, true, 0);
                     },
                     constructor.next,
                     AppColors.BOTTOM_BAR_DISABLED,
                     buttonOptions: ButtonOptions.keyboardAndProgress,
                   );
                 case ActiveActions.typeVisible:
+                  Future.delayed(Duration(milliseconds: 200), () {
+                    _scrollToBottom(Duration(seconds: 2));
+                  });
                   return TypingActions(
                     () {
                       constructor.showKeyboard(
-                          constructor.inputFieldKey.currentState, true);
+                          constructor.inputFieldKey.currentState, true, 0);
                     },
                     () {
                       constructor.showVoice(
-                          constructor.inputFieldKey.currentState, true);
+                          constructor.inputFieldKey.currentState, true, 0);
                     },
                     constructor.next,
                     AppColors.BOTTOM_BAR_DISABLED,
@@ -310,11 +311,11 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
                   return TypingActions(
                     () {
                       constructor.showKeyboard(
-                          constructor.inputFieldKey.currentState, true);
+                          constructor.inputFieldKey.currentState, true, 0);
                     },
                     () {
                       constructor.showVoice(
-                          constructor.inputFieldKey.currentState, true);
+                          constructor.inputFieldKey.currentState, true, 0);
                     },
                     constructor.next,
                     AppColors.BOTTOM_BAR_DISABLED,
@@ -485,27 +486,16 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
   }
 
   void _showDeleteAnswerDialog() {
-    MixPanelProvider().trackEvent("REFLECT",
-        {"Delete Section Reflect Pop Up": DateTime.now().toIso8601String()});
     DialogLaunchers.showAnimatedDelete(
       context,
       title: "Delete section",
       mainText:
           "Are you sure you want to delete this part of your conversation?",
       yesAction: () {
-        MixPanelProvider().trackEvent("CONVERSATION", {
-          "Click Delete Section": DateTime.now().toIso8601String(),
-          "button": "yes"
-        });
         constructor.showQuestionOptions();
       },
       titleIcon: Icons.delete_outline,
-      noAction: () {
-        MixPanelProvider().trackEvent("CONVERSATION", {
-          "Click Delete Section": DateTime.now().toIso8601String(),
-          "button": "no"
-        });
-      },
+      noAction: () {},
       toastText: "Part of the conversation deleted",
     );
   }
@@ -522,8 +512,6 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
   }
 
   void _showInfo(String questionTitle, String longDescription, int level) {
-    MixPanelProvider().trackEvent(
-        "REFLECT", {"Info Icon Tier ": level, "Title": questionTitle});
     DialogLaunchers.showInfo(context, questionTitle, longDescription);
   }
 
@@ -533,7 +521,7 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
         _showRenameScreen(context, widget.bloc.reflectionTitle);
         break;
       case "Delete":
-        _showDeleteReflectionDialog();
+        _showDeleteConversationDialog();
         break;
       case "Set a reminder for this":
         _showReminderDialog();
@@ -544,26 +532,17 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
     }
   }
 
-  void _showDeleteReflectionDialog() {
-    MixPanelProvider().trackEvent("REFLECT", {
-      "Pageview Delete Conversation Pop Up": DateTime.now().toIso8601String()
-    });
-    DialogLaunchers.showAnimatedDelete(context,
+  void _showDeleteConversationDialog() async {
+    bool dialogResult = await DialogLaunchers.showAnimatedDelete(context,
         title: "Delete conversation",
         titleIcon: Icons.delete_outline,
         toastText: "'${widget.bloc.reflectionTitle}' deleted",
         mainText: "Are you sure you want to delete this conversation?",
         yesAction: () async {
-      MixPanelProvider().trackEvent("REFLECT", {
-        "Click Delete Conversation Button Yes": DateTime.now().toIso8601String()
-      });
       await widget.bloc.deleteReflection();
       Navigator.of(context).pop(true);
-    }, noAction: () {
-      MixPanelProvider().trackEvent("REFLECT", {
-        "Click Delete Conversation Button No": DateTime.now().toIso8601String()
-      });
-    });
+    }, noAction: () {});
+    if (dialogResult ?? false) Navigator.of(context).pop();
   }
 
   void _showRenameScreen(BuildContext context, String oldName) async {
@@ -603,7 +582,7 @@ class _ReflectingFurtherScreenState extends State<ReflectingFurtherScreen> {
             curve: AppSizes.ANIMATION_TYPE);
 
       if (nestedController.hasClients)
-        nestedController.animateTo(nestedController.position.viewportDimension,
+        nestedController.animateTo(nestedController.position.maxScrollExtent,
             duration: AppSizes.ANIMATION_DURATION,
             curve: AppSizes.ANIMATION_TYPE);
     });

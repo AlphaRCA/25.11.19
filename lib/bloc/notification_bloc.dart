@@ -3,12 +3,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:hold/bloc/preferences_provider.dart';
-import 'package:hold/utils/notification_manager.dart';
 import 'package:hold/model/reminder.dart';
 import 'package:hold/storage/reminder_id.dart';
 import 'package:hold/storage/storage_provider.dart';
-
-import 'mixpanel_provider.dart';
+import 'package:hold/utils/notification_manager.dart';
 
 class NotificationBloc {
   static const channnelID = "156";
@@ -48,19 +46,11 @@ class NotificationBloc {
   }
 
   Future switchAllNotifications(bool value) async {
-    MixPanelProvider().trackEvent("PROFILE", {
-      "Click Notifications switch": DateTime.now().toIso8601String(),
-      "value": value ? "enabled" : "disabled"
-    });
     await PreferencesProvider().saveMixpanelNotificationsEnabled(value);
     _mixpanelNotificationsEnabledController.add(value);
   }
 
   void switchMyNotifications(bool value) {
-    MixPanelProvider().trackEvent("PROFILE", {
-      "Click Reminders": DateTime.now().toIso8601String(),
-      "value": value ? "enabled" : "disabled"
-    });
     PreferencesProvider().saveMyNotificationsEnabled(value);
     _myNotificationsEnabledController.add(value);
     if (value) {
@@ -84,13 +74,6 @@ class NotificationBloc {
   }
 
   Future<bool> saveCreation() async {
-    MixPanelProvider().trackEvent("PROFILE", {
-      "Set reminder result": DateTime.now().toIso8601String(),
-      "update action": isUpdated,
-      "selected weekdays": editedReminder.weekdays,
-      "time": "${editedReminder.time.hour}:${editedReminder.time.minute}"
-    });
-
     if (await StorageProvider().hasTheSameReminder(editedReminder)) {
       return false;
     } else {

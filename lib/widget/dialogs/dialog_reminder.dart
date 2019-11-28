@@ -32,8 +32,6 @@ class _DialogReminderState extends State<DialogReminder> {
 
   @override
   void initState() {
-    MixPanelProvider().trackEvent(
-        "PROFILE", {"Set a Reminder Popup": DateTime.now().toIso8601String()});
     _switchValue = widget.bloc.editedReminder.repeatWeekly;
     _weekdaySelection = widget.bloc.editedReminder.getWeekdayList();
     super.initState();
@@ -184,11 +182,6 @@ class _DialogReminderState extends State<DialogReminder> {
                     activeColor: Color(0xff0ed998),
                     value: _switchValue,
                     onChanged: (value) {
-                      MixPanelProvider().trackEvent("PROFILE", {
-                        "Click Repeate Weekly Reminder":
-                            DateTime.now().toIso8601String(),
-                        "value": value
-                      });
                       widget.bloc.onWeekSwitch(value);
                       setState(() {
                         _switchValue = value;
@@ -209,9 +202,6 @@ class _DialogReminderState extends State<DialogReminder> {
                       style: TextStyle(color: AppColors.DIALOG_REMINDER_TEXT),
                     ),
                     onPressed: () {
-                      MixPanelProvider().trackEvent("PROFILE", {
-                        "Reminder cancel": DateTime.now().toIso8601String()
-                      });
                       widget.bloc.dismissEdition();
                       Navigator.of(context).pop();
                     },
@@ -223,10 +213,11 @@ class _DialogReminderState extends State<DialogReminder> {
                       style: AppStyles.GENERAL_TEXT,
                     ),
                     onPressed: () async {
+                      MixPanelProvider().trackIncrement(
+                          widget.bloc.editedReminder.getCardNum() == 0
+                              ? "# General Reminders Set"
+                              : "# Conversation Reminders Set");
                       if (await widget.bloc.saveCreation()) {
-                        MixPanelProvider().trackEvent("CONVERSATION", {
-                          "Reminder save": DateTime.now().toIso8601String()
-                        });
                         showToastWidget(
                           ToastReminderSet(),
                           duration: Duration(seconds: 2),

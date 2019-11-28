@@ -1,3 +1,4 @@
+import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/play_controller.dart';
 import 'package:hold/bloc/play_text_provider.dart';
 import 'package:hold/model/conversation.dart';
@@ -6,8 +7,6 @@ import 'package:hold/model/played_item.dart';
 import 'package:hold/model/reflection.dart';
 import 'package:hold/storage/conversation_content.dart';
 import 'package:hold/storage/storage_provider.dart';
-
-import 'mixpanel_provider.dart';
 
 class ConversationCreationBloc extends PlayController {
   Future<int> cardNumber;
@@ -96,9 +95,9 @@ class ConversationCreationBloc extends PlayController {
   }
 
   Future saveMood() async {
-    MixPanelProvider().trackEvent("CONVERSATION", {
-      "Slide Emotion Scale": DateTime.now().toIso8601String(),
-      "value": conversation.positiveMood
+    MixPanelProvider().trackEvent("Click Complete Conversation", {
+      "Conversation Completion Time": DateTime.now().toIso8601String(),
+      "# Stages Conversation": conversation.content.length
     });
     await storageProvider.updateConversation(conversation);
   }
@@ -108,10 +107,6 @@ class ConversationCreationBloc extends PlayController {
   }
 
   Future<int> setTitle(String title) async {
-    MixPanelProvider().trackEvent("CONVERSATION",
-        {"Click Done Name Button": DateTime.now().toIso8601String()});
-    MixPanelProvider()
-        .trackEvent("CONVERSATION", {"Name fielt": title.isNotEmpty});
     conversation.title = title;
     await storageProvider.updateConversation(conversation);
     return conversation.cardNumber;

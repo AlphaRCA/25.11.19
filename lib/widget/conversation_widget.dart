@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hold/bloc/conversation_creation_bloc.dart';
 import 'package:hold/bloc/conversation_full_bloc.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/notification_bloc.dart';
 import 'package:hold/bloc/recent_activity_bloc.dart';
 import 'package:hold/collection_selection_screen.dart';
@@ -207,9 +206,6 @@ class ConversationWidget extends StatelessWidget {
   }
 
   void _openReflectionScreen(BuildContext context, GlobalKey globalKey) async {
-    MixPanelProvider().trackEvent("REFLECT", {
-      "Open Conversation": DateTime.now().toIso8601String(),
-    });
     final RenderBox containerRenderBox = context.findRenderObject();
     if (content.isFinished) {
       ConversationFullBloc blocInside =
@@ -239,26 +235,14 @@ class ConversationWidget extends StatelessWidget {
   }
 
   void _showDeleteDialog(BuildContext context) {
-    MixPanelProvider().trackEvent("CONVERSATION", {
-      "Pageview Delete Section Conversation Popup":
-          DateTime.now().toIso8601String(),
-    });
     DialogLaunchers.showAnimatedDelete(
       context,
       title: "Delete conversation",
       mainText: "Are you sure you want to delete this conversation?",
       yesAction: () {
-        MixPanelProvider().trackEvent("CONVERSATION", {
-          "Click Delete Section Conversation Button Yes":
-              DateTime.now().toIso8601String(),
-        });
         bloc.deleteReflection(content.cardNumber);
       },
       noAction: () {
-        MixPanelProvider().trackEvent("CONVERSATION", {
-          "Click Delete Section Conversation Button No":
-              DateTime.now().toIso8601String(),
-        });
       },
       titleIcon: Icons.delete_outline,
       toastText: "'${content.getTitle()}' deleted",

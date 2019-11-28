@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/constants/app_sizes.dart';
 import 'package:hold/constants/app_styles.dart';
@@ -90,8 +89,6 @@ class TypingActions extends StatelessWidget {
                 ],
               ),
               onPressed: () {
-                MixPanelProvider()
-                    .trackEvent("REFLECT", {"Click": leftButtonText});
                 leftAction();
               },
             ),

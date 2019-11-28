@@ -10,8 +10,6 @@ import 'package:hold/widget/buttons/bottom_button.dart';
 import 'package:hold/widget/header_text.dart';
 import 'package:hold/widget/onboarding_text.dart';
 import 'package:hold/widget/screen_parts/profile_page.dart';
-
-import 'bloc/mixpanel_provider.dart';
 import 'constants/app_sizes.dart';
 import 'loaded_text_screen.dart';
 
@@ -93,19 +91,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         isFinalButton ? "I UNDERSTAND" : "NEXT",
         () {
           if (isFinalButton) {
-            MixPanelProvider().trackEvent("ONBOARDING", {
-              "Click Understand Button Step 4": DateTime.now().toIso8601String()
-            });
             _bloc.acceptAndStart();
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => InitialScreen()),
             );
           } else {
-            MixPanelProvider().trackEvent("ONBOARDING", {
-              "Click Next Button ${pageIndex + 1}":
-                  DateTime.now().toIso8601String()
-            });
             controller.nextPage(
               duration: AppSizes.PAGE_ANIMATION_DURATION,
               curve: AppSizes.ANIMATION_TYPE,
@@ -164,18 +155,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           pageIndex = controller.page.round();
           isFinalButton = true;
         });
-        MixPanelProvider().trackEvent("ONBOARDING", {
-          "Pageview Step ${pageIndex + 1}": DateTime.now().toIso8601String()
-        });
       }
     } else {
       if (pageIndex != controller.page.round()) {
         setState(() {
           pageIndex = controller.page.round();
           isFinalButton = false;
-        });
-        MixPanelProvider().trackEvent("ONBOARDING", {
-          "Pageview Step ${pageIndex + 1}": DateTime.now().toIso8601String()
         });
       }
     }

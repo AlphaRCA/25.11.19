@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/utils/dispose_primary_fucus.util.dart';
 import 'package:hold/widget/buttons/bottom_button.dart';
@@ -36,9 +35,6 @@ class _RenameScreenState extends State<RenameScreen> {
 
   @override
   void initState() {
-    MixPanelProvider().trackEvent("CONVERSATION",
-        {"surePageview Name Conversation": DateTime.now().toIso8601String()});
-
     WidgetsBinding.instance.addPostFrameCallback(_afterBuild);
     focusNode.addListener(_onKeyboardAppearanceChanged);
 
@@ -251,12 +247,6 @@ class _RenameScreenState extends State<RenameScreen> {
                       _withKeyboard = false;
                     });
                   }
-                  MixPanelProvider().trackEvent("COLLECTIONS",
-                      {"Input field": controller.text.isNotEmpty});
-
-                  MixPanelProvider().trackEvent("COLLECTIONS",
-                      {"Click Save Collection Button": controller.text.isNotEmpty});
-
                   int result = await widget.onSave(
                     controller.text.isNotEmpty ? controller.text : "Untitled",
                   );

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/play_controller.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/model/played_item.dart';
@@ -124,8 +123,6 @@ class CircularPlayProgressState extends State<CircularPlayProgress> {
 
   void _pause() {
     widget.bloc.pauseVoice();
-    MixPanelProvider().trackEvent("CONVERSATION",
-        {"Click Pause Input Button": DateTime.now().toIso8601String()});
   }
 
   void _play() {
@@ -136,7 +133,5 @@ class CircularPlayProgressState extends State<CircularPlayProgress> {
       print("command play conversation");
       widget.bloc.playConversation(widget.conversationId);
     }
-    MixPanelProvider().trackEvent("CONVERSATION",
-        {"Click Listen to Input Button": DateTime.now().toIso8601String()});
   }
 }

@@ -51,12 +51,14 @@ import Mixpanel
         Mixpanel.mainInstance().reset()
       } else if(call.method == "flush") {
         Mixpanel.mainInstance().flush()
+      } else if (call.method == "increment") {
+        print("let's increment this")
+        Mixpanel.mainInstance().people.increment(property: call.arguments as! String, by: 1.0)
       } else if let argProperties = try self.getPropertiesFromArguments(callArguments: call.arguments) {
         Mixpanel.mainInstance().track(event: call.method, properties: argProperties)
-      } else {
+      }  else {
         Mixpanel.mainInstance().track(event: call.method)
       }
-
       result(true)
     } catch {
       print(error.localizedDescription)

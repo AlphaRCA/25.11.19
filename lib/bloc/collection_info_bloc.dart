@@ -15,7 +15,6 @@ import 'package:hold/widget/stick_position.dart';
 import 'package:rxdart/rxdart.dart';
 
 import '../main.dart';
-import 'mixpanel_provider.dart';
 
 class CollectionInfoBloc extends PlayController {
   BehaviorSubject<String> _collectionTitleController = new BehaviorSubject();
@@ -43,11 +42,6 @@ class CollectionInfoBloc extends PlayController {
   void _loadDataFromStorage() async {
     _collection = await StorageProvider().getCollection(collectionId);
     collectionTitleFinal = _collection.title;
-
-    MixPanelProvider().trackEvent("COLLECTION", {
-      "Collection size (reflections and additionals)":
-          _collection.shortContent.length,
-    });
     _collectionTitleController.add(_collection.title);
     _collectionDataController.add(_collection);
     _formTextForVoice(_collection);

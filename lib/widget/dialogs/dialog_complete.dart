@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/widget/dialogs/dialog_button_painted.dart';
 import 'package:hold/widget/dialogs/dialog_container.dart';
@@ -16,9 +15,6 @@ class DialogComplete extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    MixPanelProvider().trackEvent("REFLECT", {
-      "Pageview Add to collection pop up": DateTime.now().toIso8601String()
-    });
     return DialogContainer(
       title: "Add to collection",
       mainText:
@@ -33,10 +29,6 @@ class DialogComplete extends StatelessWidget {
               textColor: AppColors.DIALOG_INACTIVE_TEXT,
               child: Text("NOT NOW"),
               onPressed: () {
-                MixPanelProvider().trackEvent("REFLECT", {
-                  "Click Add to collection Button Yes":
-                      DateTime.now().toIso8601String()
-                });
                 Navigator.of(context).pop();
               },
             ),
@@ -47,10 +39,6 @@ class DialogComplete extends StatelessWidget {
                 //Click Add to Collection Button
                 text: "ADD TO COLLECTION",
                 onPressed: () async {
-                  MixPanelProvider().trackEvent("REFLECT", {
-                    "Click Add to collection Button No":
-                        DateTime.now().toIso8601String()
-                  });
                   await addToCollection();
                   Navigator.of(context).pop();
                 }),

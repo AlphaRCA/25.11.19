@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/recent_activity_bloc.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/model/conversation_widget_content.dart';
@@ -92,11 +91,6 @@ class RecentActivityListState extends State<RecentActivityList> {
       builder: (BuildContext context,
           AsyncSnapshot<List<ConversationWidgetContent>> snapshot) {
         List<ConversationWidgetContent> list = snapshot.data;
-        if (_isSearchResult && list.length == 0) {
-          MixPanelProvider().trackEvent("REFLECT", {
-            "Search Result not found": DateTime.now().toIso8601String(),
-          });
-        }
         if (list.length == 0) {
           return _isSearchResult
               ? NoResultTextWidget()

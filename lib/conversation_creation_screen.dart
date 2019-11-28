@@ -1,11 +1,12 @@
-import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:coach_marks/TutorialOverlayUtil.dart';
 import 'package:coach_marks/WidgetData.dart';
+import 'package:facebook_app_events/facebook_app_events.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hold/bloc/conversation_creation_bloc.dart';
+import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/notification_bloc.dart';
 import 'package:hold/bloc/preferences_provider.dart';
 import 'package:hold/constants/app_sizes.dart';
@@ -22,7 +23,6 @@ import 'package:hold/widget/dialogs/dialog_yes_no_cancel.dart';
 import 'package:hold/widget/launchers/dialog_launchers.dart';
 import 'package:hold/widget/stick_position.dart';
 
-import 'bloc/mixpanel_provider.dart';
 import 'constants/app_colors.dart';
 import 'main.dart';
 import 'model/reminder.dart';
@@ -61,6 +61,7 @@ class _ConversationCreationScreenState
 
   // Offset _containerPosition = Offset(0, 0);
   StickPosition stickPosition;
+  int dataNumber;
 
   @override
   void initState() {
@@ -80,9 +81,6 @@ class _ConversationCreationScreenState
     SchedulerBinding.instance.addPostFrameCallback(_createCoach);
     stickPosition = constructor.getPosition(widget.bloc.type, 2);
     super.initState();
-    MixPanelProvider().trackEvent("CONVERSATION", {
-      "Pageview Conversation Creating Input": DateTime.now().toIso8601String()
-    });
   }
 
   @override
@@ -101,6 +99,7 @@ class _ConversationCreationScreenState
               initialData: 0,
               future: widget.bloc.cardNumber,
               builder: (BuildContext context, AsyncSnapshot<int> data) {
+                dataNumber = data.data;
                 return Text(
                   "Conversation n. ${data.data}",
                   style: TextStyle(color: AppColors.REFLECT_SCREEN_TITLE),
@@ -183,11 +182,15 @@ class _ConversationCreationScreenState
                         return TypingActions(
                           () {
                             constructor.showKeyboard(
-                                constructor.inputFieldKey.currentState, false);
+                                constructor.inputFieldKey.currentState,
+                                false,
+                                dataNumber);
                           },
                           () {
                             constructor.showVoice(
-                                constructor.inputFieldKey.currentState, false);
+                                constructor.inputFieldKey.currentState,
+                                false,
+                                dataNumber);
                           },
                           constructor.next,
                           constructor.getActiveItemColor(constructor.index),
@@ -197,11 +200,15 @@ class _ConversationCreationScreenState
                         return TypingActions(
                           () {
                             constructor.showKeyboard(
-                                constructor.inputFieldKey.currentState, false);
+                                constructor.inputFieldKey.currentState,
+                                false,
+                                dataNumber);
                           },
                           () {
                             constructor.showVoice(
-                                constructor.inputFieldKey.currentState, false);
+                                constructor.inputFieldKey.currentState,
+                                false,
+                                dataNumber);
                           },
                           constructor.next,
                           constructor.getActiveItemColor(constructor.index),
@@ -211,11 +218,15 @@ class _ConversationCreationScreenState
                         return TypingActions(
                           () {
                             constructor.showKeyboard(
-                                constructor.inputFieldKey.currentState, false);
+                                constructor.inputFieldKey.currentState,
+                                false,
+                                dataNumber);
                           },
                           () {
                             constructor.showVoice(
-                                constructor.inputFieldKey.currentState, false);
+                                constructor.inputFieldKey.currentState,
+                                false,
+                                dataNumber);
                           },
                           constructor.next,
                           constructor.getActiveItemColor(constructor.index),
@@ -225,11 +236,15 @@ class _ConversationCreationScreenState
                         return TypingActions(
                           () {
                             constructor.showKeyboard(
-                                constructor.inputFieldKey.currentState, false);
+                                constructor.inputFieldKey.currentState,
+                                false,
+                                dataNumber);
                           },
                           () {
                             constructor.showVoice(
-                                constructor.inputFieldKey.currentState, false);
+                                constructor.inputFieldKey.currentState,
+                                false,
+                                dataNumber);
                           },
                           constructor.next,
                           constructor.getActiveItemColor(constructor.index),
@@ -239,11 +254,15 @@ class _ConversationCreationScreenState
                         return TypingActions(
                           () {
                             constructor.showKeyboard(
-                                constructor.inputFieldKey.currentState, false);
+                                constructor.inputFieldKey.currentState,
+                                false,
+                                dataNumber);
                           },
                           () {
                             constructor.showVoice(
-                                constructor.inputFieldKey.currentState, false);
+                                constructor.inputFieldKey.currentState,
+                                false,
+                                dataNumber);
                           },
                           constructor.next,
                           constructor.getActiveItemColor(constructor.index),
@@ -260,15 +279,19 @@ class _ConversationCreationScreenState
                           key: _endConversationButtonKey,
                         );
                       case ActiveActions.backOrComplete:
-                        print(
-                            "  ----------------ActiveActions.backOrComplete ");
-                        return BackCompleteActions(
-                            constructor.cancelInput, null);
+                        {
+                          print(
+                              "backOrComplete-----------------------------------");
+                          return BackCompleteActions(
+                              constructor.cancelInput, null);
+                        }
                       case ActiveActions.backOrCompleteAvailable:
-                        print(
-                            "  ----------------ActiveActions.backOrCompleteAvailable");
-                        return BackCompleteActions(
-                            constructor.cancelInput, constructor.next);
+                        {
+                          print(
+                              "backOrCompleteAvailable-----------------------------------");
+                          return BackCompleteActions(
+                              constructor.cancelInput, constructor.next);
+                        }
                       case ActiveActions.nothing:
                       default:
                         return Container();
@@ -292,18 +315,9 @@ class _ConversationCreationScreenState
             toastText: "'${widget.bloc.conversation.getTitle()}' deleted",
             mainText: "Are you sure you want to delete this conversation?",
             yesAction: () async {
-          MixPanelProvider().trackEvent("REFLECT", {
-            "Click Delete Conversation Button Yes":
-                DateTime.now().toIso8601String()
-          });
           deleteConversation();
           Navigator.of(context).pop();
-        }, noAction: () {
-          MixPanelProvider().trackEvent("REFLECT", {
-            "Click Delete Conversation Button No":
-                DateTime.now().toIso8601String()
-          });
-        });
+        }, noAction: () {});
       }
     } else
       _showReminderDialog();
@@ -315,6 +329,7 @@ class _ConversationCreationScreenState
   }
 
   Future _showReminderDialog() async {
+    MixPanelProvider().trackIncrement("# Incomplete Conversations");
     NotificationBloc bloc = new NotificationBloc();
     await bloc.initReminderItem(widget.bloc.conversation.cardNumber,
         widget.bloc.conversation.getTitle());
@@ -322,8 +337,6 @@ class _ConversationCreationScreenState
   }
 
   void _showInfo(String questionTitle, String longDescription, int level) {
-    MixPanelProvider().trackEvent("CONVERSATION",
-        {"Click Info Icon Conversation": DateTime.now().toIso8601String()});
     DialogLaunchers.showInfo(context, questionTitle, longDescription);
   }
 
@@ -331,23 +344,16 @@ class _ConversationCreationScreenState
     List<ConversationWidgetContent> data =
         await StorageProvider().getReflectionList();
     if (data != null) {
-      MixPanelProvider().trackEvent("CONVERSATION", {"length": data.length});
-      MixPanelProvider().trackEvent("CONVERSATION",
-          {"conversation": data.length, "length": constructor.index});
-    }
-    MixPanelProvider().trackEvent("CONVERSATION",
-        {"Click Complete Button": DateTime.now().toIso8601String()});
-
-    facebookAppEvents.logEvent(name: 'Completeconversation');
-
-    int result = await Navigator.of(context).push(CupertinoPageRoute<int>(
-        builder: (context) => RenameScreen(
-              "You have successfully created \n'Conversation no. ${widget.bloc.conversation.cardNumber}'.",
-              widget.bloc.setTitle,
-              subtitle: "Please, give it a memorable title.",
-            )));
-    if (result != null) {
-      Navigator.of(context).pop(true);
+      int result = await Navigator.of(context).push(CupertinoPageRoute<int>(
+          builder: (context) => RenameScreen(
+                "You have successfully created \n'Conversation no. ${widget.bloc.conversation.cardNumber}'.",
+                widget.bloc.setTitle,
+                subtitle: "Please, give it a memorable title.",
+              )));
+      facebookAppEvents.logEvent(name: 'Completeconversation');
+      if (result != null) {
+        Navigator.of(context).pop(true);
+      }
     }
   }
 
@@ -362,25 +368,16 @@ class _ConversationCreationScreenState
   }
 
   Future _showLeaveDialog() async {
-    MixPanelProvider().trackEvent("CONVERSATION", {
-      "Pageview Leaving Conversation Popup": DateTime.now().toIso8601String(),
-    });
+    print(
+        "_showLeaveDialog ------------------------------------ ${widget.bloc.conversation.cardNumber}");
     bool dialogResult = await DialogLaunchers.showDialog(
         context: context,
         dialog: DialogYesNoCancel(
             "You are leaving, do you want to come back to this later by setting a reminder",
-            () {
-          MixPanelProvider().trackEvent("CONVERSATION", {
-            "Click Set reminder Conversation": DateTime.now().toIso8601String()
-          });
-        },
+            () {},
             noAction: () {},
             title: "Do you want to set a reminder?",
             icon: Icons.alarm));
-    MixPanelProvider().trackEvent("CONVERSATION", {
-      "Click Back Button": DateTime.now().toIso8601String(),
-      "reminder_request_accepted": dialogResult
-    });
     print("RESULT $dialogResult");
     if (dialogResult != null) {
       constructor.next();
@@ -392,28 +389,16 @@ class _ConversationCreationScreenState
   }
 
   void _showDeleteAnswerDialog() {
-    MixPanelProvider().trackEvent("CONVERSATION", {
-      "Delete Section Conversation Pop Up": DateTime.now().toIso8601String()
-    });
     DialogLaunchers.showAnimatedDelete(
       context,
       title: "Delete section",
       mainText:
           "Are you sure you want to delete this part of your conversation?",
       yesAction: () {
-        MixPanelProvider().trackEvent("CONVERSATION", {
-          "Click Delete Section": DateTime.now().toIso8601String(),
-          "button": "yes"
-        });
         constructor.cancelInput();
       },
       titleIcon: Icons.delete_outline,
-      noAction: () {
-        MixPanelProvider().trackEvent("CONVERSATION", {
-          "Click Delete Section": DateTime.now().toIso8601String(),
-          "button": "no"
-        });
-      },
+      noAction: () {},
       toastText: "Part of the conversation deleted",
     );
   }

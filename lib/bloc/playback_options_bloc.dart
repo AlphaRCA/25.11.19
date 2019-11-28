@@ -5,8 +5,6 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:hold/bloc/preferences_provider.dart';
 import 'package:rxdart/rxdart.dart';
 
-import 'mixpanel_provider.dart';
-
 class PlaybackOptionsBloc {
   BehaviorSubject<String> _selectedLanguageController = new BehaviorSubject();
   Stream<String> get selectedLanguage => _selectedLanguageController.stream;
@@ -67,10 +65,6 @@ class PlaybackOptionsBloc {
   }
 
   Future selectLanguage(String selectedLanguage, {String voice}) async {
-    MixPanelProvider().trackEvent("PROFILE", {
-      "Click Language Dropdown": DateTime.now().toIso8601String(),
-      "selected_language": selectedLanguage
-    });
     if (voice == null)
       await PreferencesProvider()
           .selectLanguage(_realLanguages[selectedLanguage]);
@@ -80,10 +74,6 @@ class PlaybackOptionsBloc {
   }
 
   void selectVoice(String selectedVoice) {
-    MixPanelProvider().trackEvent("PROFILE", {
-      "Click Playback Voice Dropdown": DateTime.now().toIso8601String(),
-      "selected_voice": selectedVoice
-    });
     PreferencesProvider().selectVoice(selectedVoice);
     _selectedVoiceController.add(selectedVoice);
   }

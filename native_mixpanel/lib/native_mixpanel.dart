@@ -50,6 +50,10 @@ class Mixpanel extends _Mixpanel {
     return this._mp.track('registerSuperProperties', jsonEncode(props));
   }
 
+  Future increment(String eventName) {
+    return this._mp.track('increment', eventName);
+  }
+
   Future reset() {
     return this._mp.track('reset');
   }

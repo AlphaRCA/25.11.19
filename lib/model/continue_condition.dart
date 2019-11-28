@@ -10,7 +10,8 @@ class ContinueCondition {
 
   bool canPlay(PlayedItem item, bool isContinuous) {
     print(
-        "let's check if it can be played. Condition is ($conversationId, $reflectionId, $isFullCollection). Checked item is ${item.toString()}. IsContinuous $isContinuous");
+        "let's check if it can be played. Condition is ($conversationId, $reflectionId, $isFullCollection). "
+        "Checked item is ${item.toString()}. IsContinuous $isContinuous");
     if (isContinuous) {
       return true;
     } else {
@@ -21,7 +22,7 @@ class ContinueCondition {
             conversationId == item.conversationCardId) {
           return true;
         } else {
-          if (item.reflectionId == reflectionId) {
+          if (item.reflectionId != null && item.reflectionId == reflectionId) {
             return true;
           } else {
             return false;

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hold/bloc/conversation_search_bloc.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/constants/app_sizes.dart';
 
@@ -90,9 +89,6 @@ class _SearchWidgetState extends State<SearchWidget> {
                   )
                 : IconButton(
                     onPressed: (){
-                      MixPanelProvider().trackEvent("REFLECT", {
-                        "Click Search": DateTime.now().toIso8601String(),
-                      });
                     },
                     icon:
                         Icon(Icons.search, color: AppColors.SEARCH_FIELD_TEXT),

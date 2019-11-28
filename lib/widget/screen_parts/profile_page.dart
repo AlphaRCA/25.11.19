@@ -1,3 +1,5 @@
+import 'package:coach_marks/TutorialOverlayUtil.dart';
+import 'package:coach_marks/WidgetData.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:hold/bloc/data_overall_bloc.dart';
@@ -17,8 +19,6 @@ import 'package:hold/widget/screen_parts/flat_text_button.dart';
 import 'package:hold/widget/screen_parts/playback_options.dart';
 import 'package:hold/widget/screen_parts/reminders_list.dart';
 import 'package:hold/widget/white_text.dart';
-import 'package:coach_marks/TutorialOverlayUtil.dart';
-import 'package:coach_marks/WidgetData.dart';
 
 class ProfilePage extends StatefulWidget {
   static const TERMS_ADDRESS = "https://hold.new-staging.springsapps.com/terms";
@@ -42,8 +42,6 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
-    MixPanelProvider().trackEvent(
-        "PROFILE", {"Pageview Profile": DateTime.now().toIso8601String()});
     return SingleChildScrollView(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -71,8 +69,6 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
           ),
           GreenAction("GET SUPPORT", () {
-            MixPanelProvider().trackEvent("PROFILE",
-                {"Click Get Support Button": DateTime.now().toIso8601String()});
             Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => GetSupportScreen()));
           }),
@@ -99,15 +95,11 @@ class _ProfilePageState extends State<ProfilePage> {
             paddingLeft: 24,
           ),
           FlatTextButton("Terms of service", () {
-            MixPanelProvider().trackEvent("PROFILE",
-                {"Click Terms of Service": DateTime.now().toIso8601String()});
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => LoadedTextScreen(
                     "Terms of service", ProfilePage.TERMS_ADDRESS)));
           }),
           FlatTextButton("Privacy policy", () {
-            MixPanelProvider().trackEvent("PROFILE",
-                {"Click Privacy Policy": DateTime.now().toIso8601String()});
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => LoadedTextScreen(
                     "Privacy policy", ProfilePage.PRIVACY_ADDRESS)));
@@ -127,8 +119,6 @@ class _ProfilePageState extends State<ProfilePage> {
                       "Delete my data",
                       hasData
                           ? () {
-                        MixPanelProvider().trackEvent("PROFILE",
-                            {"Click Delete my Data": DateTime.now().toIso8601String()});
                               DialogLaunchers.showDialog(
                                 context: context,
                                 dialog: DialogYesNoCancel(
@@ -169,22 +159,18 @@ class _ProfilePageState extends State<ProfilePage> {
   }
 
   void _openImprovementPage(context) {
-    MixPanelProvider().trackEvent("PROFILE",
-        {"Click Improve HOLD Button": DateTime.now().toIso8601String()});
+    MixPanelProvider()
+        .trackEvent("Profile", {"Click Improve HOLD": DateTime.now().toIso8601String()});
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (context) => ImproveHoldScreen()));
   }
 
   Future _doExport() async {
-    MixPanelProvider().trackEvent("PROFILE",
-        {"Click Export Data": DateTime.now().toIso8601String()});
     //TODO show progress
     dataBloc.exportData();
   }
 
   Future _doImport() async {
-    MixPanelProvider().trackEvent("PROFILE",
-        {"Click Import Data": DateTime.now().toIso8601String()});
     await dataBloc.importData();
     //TODO recreate notifications
   }
@@ -194,8 +180,8 @@ class _ProfilePageState extends State<ProfilePage> {
       context: context,
       defaultPadding: 0,
       tagName: 'profile',
-      bgColor: Colors.black.withOpacity(
-          0.75), // Optional. uses black color with 0.4 opacity by default
+      bgColor: Colors.black.withOpacity(0.75),
+      // Optional. uses black color with 0.4 opacity by default
       onTap: () {
         PreferencesProvider().saveProfileScreenCoachMark();
         hideOverlayEntryIfExists();

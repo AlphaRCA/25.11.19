@@ -4,13 +4,9 @@ import 'package:hold/widget/buttons/appbar_back.dart';
 import 'package:hold/widget/buttons/green_action.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'bloc/mixpanel_provider.dart';
-
 class GetSupportScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    MixPanelProvider().trackEvent(
-        "PROFILE", {"Pageview Get Support": DateTime.now().toIso8601String()});
     return Scaffold(
       appBar: AppBar(
         leading: AppBarBack(),
@@ -61,8 +57,6 @@ class GetSupportScreen extends StatelessWidget {
   }
 
   void _openMindCoUk() async {
-    MixPanelProvider().trackEvent("PROFILE",
-        {"Click Mind.co.uk button": DateTime.now().toIso8601String()});
     const url = 'https://www.mind.org.uk/';
     if (await canLaunch(url)) {
       await launch(url);
@@ -70,8 +64,6 @@ class GetSupportScreen extends StatelessWidget {
   }
 
   void _openSamaritans() async {
-    MixPanelProvider().trackEvent("PROFILE",
-        {"Click Samaritans button": DateTime.now().toIso8601String()});
     const url = 'https://www.samaritans.org/';
     if (await canLaunch(url)) {
       await launch(url);
@@ -79,9 +71,6 @@ class GetSupportScreen extends StatelessWidget {
   }
 
   void _openNhs() async {
-    MixPanelProvider().trackEvent("PROFILE", {
-      "Click NHS Advice and Support button": DateTime.now().toIso8601String()
-    });
     const url = 'https://www.nhs.uk/';
     if (await canLaunch(url)) {
       await launch(url);

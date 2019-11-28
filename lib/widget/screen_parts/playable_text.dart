@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/play_controller.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/model/played_item.dart';
@@ -165,9 +164,6 @@ class _PlayableTextState extends State<PlayableText> {
   }
 
   void _play() {
-    MixPanelProvider().trackEvent("CONVERSATION", {
-      "Click Listen to Conversations Button": DateTime.now().toIso8601String()
-    });
     if (widget.data.reflectionId == null) {
       widget.bloc.playContent(widget.data.inConversationContentId);
     } else {
@@ -176,8 +172,6 @@ class _PlayableTextState extends State<PlayableText> {
   }
 
   void _pause() {
-    MixPanelProvider().trackEvent("CONVERSATION",
-        {"Click Pause Conversations Button": DateTime.now().toIso8601String()});
     widget.bloc.pauseVoice();
   }
 

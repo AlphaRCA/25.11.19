@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/select_conversation_bloc.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/model/conversation_widget_content.dart';
@@ -163,9 +162,6 @@ class _ConversationSelectionScreenState
   }
 
   Future<int> _onSave(String collectionName) {
-    MixPanelProvider().trackEvent("COLLECTIONS", {
-      "Click Add to Collection Done Button": DateTime.now().toIso8601String()
-    });
     Future.delayed(Duration(microseconds: 500), () {
       showToastWidget(
         GeneralToast(

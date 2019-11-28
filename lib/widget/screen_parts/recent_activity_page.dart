@@ -53,10 +53,6 @@ class _RecentActivityPageState extends State<RecentActivityPage> {
 
   @override
   void initState() {
-    MixPanelProvider().trackEvent("REFLECT", {
-      "Pageview Conversations Browsing Reflect":
-          DateTime.now().toIso8601String(),
-    });
     _moodGraph = Container(
       key: _moodGraphKey,
       padding: EdgeInsets.only(top: 16.0),
@@ -149,9 +145,6 @@ class _RecentActivityPageState extends State<RecentActivityPage> {
   }
 
   void _onSearchCancel() {
-    MixPanelProvider().trackEvent("CONVERSATIONS", {
-      "Search cancel": DateTime.now().toIso8601String(),
-    });
     setState(() {
       _searchIsActive = false;
     });
@@ -180,8 +173,8 @@ class _RecentActivityPageState extends State<RecentActivityPage> {
       defaultPadding: 0,
       tagName: 'mood',
       enableHolesAnimation: false,
-      bgColor: Colors.black.withOpacity(
-          0.75), // Optional. uses black color with 0.4 opacity by default
+      bgColor: Colors.black.withOpacity(0.75),
+      // Optional. uses black color with 0.4 opacity by default
       onTap: () {
         PreferencesProvider().saveTwoConversationsCoachMark();
         hideOverlayEntryIfExists();
@@ -237,6 +230,8 @@ class _RecentActivityPageState extends State<RecentActivityPage> {
 
   void _setListSize(List data) async {
     listSize = data.length;
+    MixPanelProvider().trackPeopleProperties(
+        {"# Conversations in Reflect": "${listSize}"});
     _showCoachMark();
   }
 

@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hold/bloc/conversation_creation_bloc.dart';
-import 'package:hold/bloc/mixpanel_provider.dart';
 import 'package:hold/bloc/request_input_bloc.dart';
 import 'package:hold/constants/app_colors.dart';
 import 'package:hold/model/conversation.dart';
@@ -99,9 +98,6 @@ class ConversationCreatedConstructor extends ConversationConstructor {
         }
         break;
       case _Step.additionalVisible:
-        MixPanelProvider().trackEvent("CONVERSATION", {
-          "Click End Conversation Button": DateTime.now().toIso8601String()
-        });
         activePart = _getMoodRequest();
         activePart2 = null;
         _step = _Step.moodVisible;
