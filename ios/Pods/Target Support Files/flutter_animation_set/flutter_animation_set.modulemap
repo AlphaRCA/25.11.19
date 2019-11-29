@@ -1,0 +1,6 @@
+framework module flutter_animation_set {
+  umbrella header "flutter_animation_set-umbrella.h"
+
+  export *
+  module * { export * }
+}
